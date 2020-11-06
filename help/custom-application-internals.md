@@ -1,26 +1,26 @@
 ---
 title: Comprendre le fonctionnement d’une application personnalisée.
-description: Fonctionnement interne [!DNL Asset Compute Service] d’une application personnalisée pour vous aider à comprendre son fonctionnement.
-translation-type: tm+mt
+description: Fonctionnement interne d’une application personnalisée  [!DNL Asset Compute Service]  pour faciliter votre compréhension.
+translation-type: ht
 source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '774'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Internes d’une application personnalisée {#how-custom-application-works}
+# Fonctionnement interne d’une application personnalisée {#how-custom-application-works}
 
-Utilisez l’illustration suivante pour comprendre le processus de bout en bout lorsqu’un fichier numérique est traité à l’aide d’une application personnalisée par un client.
+Utilisez l’illustration suivante pour comprendre le workflow de bout en bout lorsqu’une ressource numérique est traitée par un client à l’aide d’une application personnalisée.
 
-![Processus des applications personnalisées](assets/customworker.png)
+![Workflow des applications personnalisées](assets/customworker.png)
 
-*Figure : Procédure de traitement d’un actif à l’aide de [!DNL Asset Compute Service].*
+*Figure : Procédure de traitement d’une ressource à l’aide d’[!DNL Asset Compute Service].*
 
 ## Enregistrement {#registration}
 
-Le client doit appeler [`/register`](api.md#register) une fois avant la première demande pour [`/process`](api.md#process-request) configurer et récupérer l&#39;URL de journal pour la réception de Événements d&#39;E/S d&#39;Adobe pour le calcul des ressources d&#39;Adobe.
+Le client doit appeler une fois [`/register`](api.md#register) avant la première requête à [`/process`](api.md#process-request) pour configurer et récupérer l’URL du journal afin de recevoir les événements Adobe I/O pour Adobe Asset Compute.
 
 ```sh
 curl -X POST \
@@ -31,11 +31,11 @@ curl -X POST \
   -H "x-api-key: $API_KEY"
 ```
 
-La bibliothèque [`@adobe/asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) JavaScript peut être utilisée dans les applications NodeJS pour gérer toutes les étapes nécessaires, de l’enregistrement au traitement en passant par la gestion asynchrone des événements. Pour plus d’informations sur les en-têtes requis, voir [Authentification et autorisation](api.md).
+Il est possible d’utiliser la bibliothèque JavaScript [`@adobe/asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) dans les applications NodeJS pour gérer toutes les étapes nécessaires, depuis l’enregistrement jusqu’au traitement en passant par la gestion asynchrone des événements. Pour plus d’informations sur les en-têtes requis, voir [Authentification et autorisation](api.md).
 
-## Traitement en cours {#processing}
+## Traitement {#processing}
 
-Le client envoie une demande de [traitement](api.md#process-request) .
+Le client envoie une requête de [traitement](api.md#process-request).
 
 ```sh
 curl -X POST \
@@ -47,11 +47,11 @@ curl -X POST \
   -d "<RENDITION_JSON>
 ```
 
-Le client est chargé de mettre correctement en forme les rendus avec des URL pré-signées. La bibliothèque [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript peut être utilisée dans les applications NodeJS pour pré-signer les URL. Actuellement, la bibliothèque ne prend en charge que l&#39;Enregistrement Azure Blob et les Conteneurs AWS S3.
+Le client est chargé de mettre correctement en forme les rendus à l’aide d’URL présignées. Il est possible d’utiliser la bibliothèque JavaScript [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) dans les applications NodeJS pour présigner les URL. Actuellement, la bibliothèque ne prend en charge que les conteneurs Azure Blob Storage et AWS S3.
 
-La demande de traitement renvoie une requête `requestId` qui peut être utilisée pour les Événements d&#39;E/S d&#39;Adobe d&#39;interrogation.
+La demande de traitement renvoie un `requestId` utilisable pour interroger les événements Adobe I/O.
 
-Vous trouverez ci-dessous un exemple de demande de traitement d’application personnalisée.
+Vous trouverez ci-dessous un exemple de requête de traitement d’application personnalisée.
 
 ```json
 {
@@ -69,15 +69,15 @@ Vous trouverez ci-dessous un exemple de demande de traitement d’application pe
 }
 ```
 
-L’ [!DNL Asset Compute Service] utilisateur envoie les demandes de rendu d’application personnalisée à l’application personnalisée. Il utilise un POST HTTP pour l’URL de l’application fournie, qui est l’URL d’action Web sécurisée du projet Firefly. Toutes les requêtes utilisent le protocole HTTPS pour optimiser la sécurité des données.
+L’[!DNL Asset Compute Service] envoie les requêtes de rendu d’application personnalisée à l’application personnalisée. Il utilise une requête HTTP POST sur l’URL de l’application fournie. Il s’agit de l’URL d’action web sécurisée de Project Firefly. Toutes les requêtes utilisent le protocole HTTPS pour maximiser la sécurité des données.
 
-Le SDK [](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) Asset Compute utilisé par une application personnalisée traite la demande de POST HTTP. Il gère également le téléchargement de la source, le transfert de rendus, l&#39;envoi de événements d&#39;E/S et la gestion des erreurs.
+Le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilisé par une application personnalisée traite la requête HTTP POST. Il gère également le téléchargement de la source, le chargement de rendus, l’envoi d’événements d’entrées-sorties et la gestion des erreurs.
 
 <!-- TBD: Add the application diagram. -->
 
-### Application code {#application-code}
+### Code de l’application {#application-code}
 
-Le code personnalisé doit uniquement fournir un rappel qui prend le fichier source disponible localement (`source.path`). Il `rendition.path` s’agit de l’emplacement où placer le résultat final d’une demande de traitement de ressources. L’application personnalisée utilise le rappel pour transformer les fichiers source disponibles localement en fichier de rendu en utilisant le nom transmis dans (`rendition.path`). Une application personnalisée doit écrire pour `rendition.path` créer un rendu :
+Le code personnalisé doit uniquement fournir un rappel qui prend le fichier source disponible localement (`source.path`). Le paramètre `rendition.path` correspond à l’emplacement où placer le résultat final d’une requête de traitement de ressource. L’application personnalisée utilise le rappel pour transformer les fichiers source disponibles localement en fichier de rendu à l’aide du nom transmis dans (`rendition.path`). Une application personnalisée doit écrire vers `rendition.path` pour créer un rendu :
 
 ```javascript
 const { worker } = require('@adobe/asset-compute-sdk');
@@ -95,35 +95,35 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-### Téléchargement de fichiers source {#download-source}
+### Téléchargement des fichiers source {#download-source}
 
-Une application personnalisée traite uniquement des fichiers locaux. Le téléchargement du fichier source est géré par le SDK [](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk)Asset Compute.
+Une application personnalisée traite uniquement des fichiers locaux. Le téléchargement du fichier source est géré par le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk).
 
 ### Création de rendu {#rendition-creation}
 
-Le SDK appelle une fonction [de rappel de](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) rendu asynchrone pour chaque rendu.
+Le SDK appelle une [fonction de rappel de rendu](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) asynchrone pour chaque rendu.
 
-La fonction de rappel a accès aux objets [source](https://github.com/adobe/asset-compute-sdk#source) et de [rendu](https://github.com/adobe/asset-compute-sdk#rendition) . Le fichier `source.path` existe déjà et est le chemin d&#39;accès à la copie locale du fichier source. Il `rendition.path` s’agit du chemin d’accès où le rendu traité doit être stocké. A moins que l&#39;indicateur [](https://github.com/adobe/asset-compute-sdk#worker-options-optional) disableSourceDownload ne soit défini, l&#39;application doit utiliser exactement le `rendition.path`. Sinon, le SDK ne peut pas localiser ni identifier le fichier de rendu et échoue.
+La fonction de rappel a accès aux objets [source](https://github.com/adobe/asset-compute-sdk#source) et de [rendu](https://github.com/adobe/asset-compute-sdk#rendition). `source.path` existe déjà et il s’agit du chemin d’accès à la copie locale du fichier source. `rendition.path` est le chemin d’accès où le rendu traité doit être stocké. Sauf si [l’indicateur disableSourceDownload](https://github.com/adobe/asset-compute-sdk#worker-options-optional) est défini, l’application doit utiliser exactement le chemin `rendition.path`. Sinon, le SDK ne peut ni localiser ni identifier le fichier de rendu et échoue.
 
-La simplification excessive de l&#39;exemple est faite pour illustrer et se concentrer sur l&#39;anatomie d&#39;une application personnalisée. L’application copie simplement le fichier source vers la destination du rendu.
+La simplification extrême de l’exemple sert à illustrer et à se concentrer sur l’anatomie d’une application personnalisée. L’application se contente de copier le fichier source vers la destination du rendu.
 
-Pour plus d’informations sur les paramètres de rappel de rendu, voir API [SDK](https://github.com/adobe/asset-compute-sdk#api-details)Asset Compute.
+Pour plus d’informations sur les paramètres de rappel de rendu, voir [API du SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#api-details).
 
-### Téléchargement de rendus {#upload-rendition}
+### Chargement des rendus {#upload-rendition}
 
-Une fois chaque rendu créé et stocké dans un fichier avec le chemin d’accès fourni par `rendition.path`, le SDK [](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) Asset Compute télécharge chaque rendu vers un enregistrement cloud (AWS ou Azure). Une application personnalisée obtient plusieurs rendus en même temps si, et uniquement si, la requête entrante comporte plusieurs rendus pointant vers la même URL d’application. Le téléchargement vers l’enregistrement cloud est effectué après chaque rendu et avant l’exécution du rappel pour le rendu suivant.
+Une fois chaque rendu créé et stocké dans un fichier avec le chemin d’accès fourni par `rendition.path`, le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) les charge vers un espace de stockage dans le cloud (AWS ou Azure). Une application personnalisée obtient plusieurs rendus simultanés si, et seulement si, la requête entrante comporte plusieurs rendus pointant vers la même URL d’application. Le chargement vers l’espace de stockage dans le cloud est effectué après chaque rendu et avant l’exécution du rappel pour le rendu suivant.
 
-Le comportement `batchWorker()` est différent, car il traite en fait tous les rendus et seulement après avoir tous été traités les télécharge.
+`batchWorker()` a un comportement différent, car il traite tous les rendus, et ne les charge qu’après les avoir tous traités.
 
-## Événements d&#39;E/S Adobe {#aio-events}
+## Événements Adobe I/O {#aio-events}
 
-Le SDK envoie des Événements d’E/S d’Adobe pour chaque rendu. Ces événements sont de type `rendition_created` ou `rendition_failed` selon le résultat. Pour plus d’informations sur les événements, voir événements [asynchrones](api.md#asynchronous-events) Asset Compute.
+Le SDK envoie des événements Adobe I/O pour chaque rendu. Ces événements sont de type `rendition_created` ou `rendition_failed`, selon le résultat. Pour plus d’informations sur les événements, voir [Événements asynchrones Asset Compute](api.md#asynchronous-events).
 
-## Recevoir des Événements d&#39;E/S Adobe {#receive-aio-events}
+## Réception des événements Adobe I/O {#receive-aio-events}
 
-Le client sonde le Journal [des Événements](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) d&#39;E/SAdobe en fonction de sa logique de consommation. L’URL de journal initial est celle fournie dans la réponse de l’ `/register` API. Les événements peuvent être identifiés à l’aide du `requestId` qui est présent dans les événements et qui est le même que celui renvoyé dans `/process`. Chaque rendu comporte un événement distinct qui est envoyé dès que le rendu a été téléchargé (ou a échoué). Une fois qu’il reçoit un événement correspondant, le client peut afficher ou gérer les rendus résultants.
+Le client interroge le [journal des événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) en fonction de sa logique de consommation. L’URL de journal initiale est celle fournie dans la réponse de l’API `/register`. Il est possible d’identifier les événements à l’aide du paramètre `requestId`, présent dans les événements. C’est le même que celui renvoyé dans `/process`. Chaque rendu comporte un événement distinct, envoyé dès que le rendu a été chargé (ou a échoué). Une fois qu’il reçoit un événement correspondant, le client peut afficher ou gérer les rendus résultants.
 
-La bibliothèque JavaScript [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) facilite l’interrogation du journal en utilisant la `waitActivation()` méthode pour obtenir tous les événements.
+La bibliothèque JavaScript [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) facilite l’interrogation du journal en utilisant la méthode `waitActivation()` pour obtenir tous les événements.
 
 ```javascript
 const events = await assetCompute.waitActivation(requestId);
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Pour plus d&#39;informations sur la façon d&#39;obtenir des événements de journal, consultez l&#39;API [des Événements d&#39;E/S](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml)d&#39;Adobe.
+Pour plus d’informations sur la façon d’obtenir des événements de journal, voir [API des événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
