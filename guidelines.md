@@ -1,40 +1,40 @@
 ---
 source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '650'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
-# Directives pour contribuer à la documentation
+# Instructions pour contribuer à la documentation
 
 ## Philosophie de la documentation
 
-Nous savons que les utilisateurs travaillent dans des environnements hautement compétitifs, s&#39;efforçant de créer des expériences numériques qui les distinguent de leurs concurrents. Il est donc essentiel que, lorsque l&#39;Adobe fournit de nouveaux outils avancés, ces outils soient complétés par une documentation précise et claire permettant au client d&#39;exploiter immédiatement son investissement et d&#39;optimiser son retour sur investissement.
+Nous savons que les utilisateurs travaillent dans des environnements très concurrentiels, afin de créer des expériences numériques qui les distinguent de leurs concurrents. Ainsi, lorsqu’Adobe fournit de nouveaux outils avancés, il est essentiel que ces outils soient complétés par une documentation précise et claire pour permettre au client d’exploiter immédiatement son investissement et maximiser le ROI.
 
-L&#39;objectif est de mettre la documentation entre les mains de ses utilisateurs dès que possible. Par conséquent, nous privilégions une documentation précise et utilisable et nous la mettons à jour et l’améliorons constamment.
+L’objectif est de placer cette documentation dès que possible entre les mains des utilisateurs. Nous privilégions donc une documentation précise et utilisable, et nous la mettons à jour et l’améliorons constamment.
 
 ## Contributions à la documentation
 
-Pour améliorer continuellement la documentation, toute la communauté des utilisateurs est invitée à contribuer à la documentation. Que ce soit par le biais de demandes d’extraction ou de demandes, les améliorations apportées à la documentation peuvent être des corrections, des clarifications, des extensions et des exemples supplémentaires.
+Afin d’améliorer continuellement la documentation, l’ensemble de la communauté des utilisateurs est la bienvenue pour y contribuer. Que ce soit par le biais de demandes d’extraction ou de demandes, les améliorations apportées à la documentation peuvent être des corrections, des clarifications, des extensions et des exemples supplémentaires.
 
 ## Normes de la documentation
 
-Bien que nous nous réjouissions des contributions à notre documentation, toute contribution à la documentation, sous la forme d&#39;une demande d&#39;appel d&#39;offres ou d&#39;une question, devrait être conforme à nos normes de contribution et de documentation. Les contributions qui ne satisfont pas à ces normes peuvent être rejetées.
+Bien que nous nous félicitions des apports à notre documentation, toute contribution sous la forme d’une demande d’extraction ou d’un problème doit être conforme à nos normes de contribution et de documentation. Les contributions qui ne satisfont pas à ces normes peuvent être rejetées.
 
-### Nous documents les cas d&#39;utilisation standard et non les solutions
+### Nous documentons les cas d’utilisation standard et non les solutions de contournement
 
-La documentation porte sur les cas d&#39;utilisation standard. Les cas d’utilisation hors du cadre de l’installation et de l’utilisation standard et prises en charge du produit ne font pas partie de la documentation. Pour cette raison, les défauts, les effets causés par des défauts et les solutions à ces défauts ne sont généralement pas documentés.
+La documentation couvre les cas d’utilisation standard. Les cas d’utilisation ne relevant pas des installations et des utilisations du produit standard et prises en charge ne font pas partie de la documentation. Pour cette raison, les défauts, leurs effets et leurs solutions ne sont généralement pas documentés.
 
-Les exceptions à cette règle sont les notes de mise à jour dans lesquelles les problèmes connus peuvent être répertoriés avec les solutions possibles qui sont approuvées par Adobe.
+Font exception à cette règle les notes de mise à jour, qui permettent de répertorier les problèmes connus ainsi que les solutions possibles, approuvées par Adobe.
 
-### Les contributions à la documentation ne doivent pas répondre aux requêtes des clients
+### Les contributions à la documentation n’ont pas pour objet de répondre aux requêtes des clients.
 
-Toutes les idées que vous pourriez avoir à améliorer la documentation sont les bienvenues à titre de contributions. Toutefois, les commentaires, les demandes et les demandes d’extraction sont destinés uniquement aux *contributions*. Ils ne sont pas destinés à être utilisés pour répondre à vos questions sur l&#39;utilisation du produit, la mise en oeuvre de projets ou la résolution de problèmes techniques.
+Toutes les idées sous forme de contributions susceptibles d’améliorer la documentation sont les bienvenues. Toutefois, les commentaires, les demandes et les demandes d’extraction sont destinés uniquement aux *contributions*. Leur finalité n’est pas de répondre à vos questions sur l’utilisation du produit, la mise en œuvre de projets ou la résolution de problèmes techniques.
 
-Any questions about the usage or technical errors you may have should be reported through the normal support process via the [Experience Cloud Enterprise Support portal](https://helpx.adobe.com/fr/contact/enterprise-support.ec.html) or discussed in the [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Toute question relative à l’utilisation ou à la résolution d’erreurs techniques doit être soumise au moyen du processus d’assistance classique par le biais du [Portail d’assistance entreprise d’Experience Cloud](https://helpx.adobe.com/fr/contact/enterprise-support.ec.html) ou posée à la [communauté Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
-Les contributions à la documentation ne remplacent pas le service d’assistance à la clientèle d’Adobes*** et toute contribution de ce type visant à obtenir des réponses à des questions d’assistance sera rejetée.
+Les contributions à la documentation ne remplacent pas l’Assistance clientèle d’Adobe et toute contribution de ce type visant à obtenir des réponses à des questions d’assistance sera refusée.
 
 ### Les contributions doivent clairement référencer les pages de documentation concernées.
 
@@ -52,15 +52,15 @@ Suivre ces directives facilite la révision et l’intégration rapide de votre 
 
 #### Langue
 
-* La documentation est rédigée et est conservée en anglais américain.
+* La documentation est créée et tenue à jour en anglais américain.
 * Veillez à ce que les expressions restent le plus simple possible.
 * Restez clair et concis.
 
-N&#39;oubliez pas que les lecteurs de la documentation sont partout dans le monde et qu&#39;on ne peut pas s&#39;attendre à ce qu&#39;ils parlent l&#39;anglais de façon native ou couramment. Évitez les expressions familières et restez aussi clair et simple que possible.
+Gardez à l’esprit que les lecteurs de la documentation sont dans le monde entier et ne sont pas nécessairement des locuteurs anglophones natifs ou parfaitement bilingues. Évitez les expressions familières et restez aussi clair et simple que possible.
 
 #### Suivi du guide de style Microsoft
 
-[Le Manuel de style](https://docs.microsoft.com/en-us/style-guide/welcome/) de Microsoft est un guide de style de documentation disponible gratuitement qui se concentre sur la documentation logicielle.
+[Le guide de style Microsoft](https://docs.microsoft.com/fr-fr/style-guide/welcome/) est disponible gratuitement et concerne la documentation logicielle.
 
 ### Mise en forme
 
@@ -70,12 +70,12 @@ N&#39;oubliez pas que les lecteurs de la documentation sont partout dans le mond
 | Nom de fichier, chemin, entrée utilisateur, paramètre-valeurs | `monospaced` |
 | Code, ligne de commande | ```Code Block``` |
 
-### Captures d&#39;écran
+### Captures d’écran
 
 Les captures d’écran doivent être utilisées de manière judicieuse et uniquement lorsqu’une description textuelle est insuffisante.
 
-N’utilisez pas de marqueurs ou d’autres annotations tels que des cadres rouges, des flèches ou du texte sur les captures d’écran. Ainsi, les captures d’écran sont plus faciles à réutiliser et à répliquer dans les versions localisées de la documentation.
+Dans les captures d’écran, n’utilisez pas de marqueurs ni d’autres annotations comme des cadres rouges, des flèches ou du texte. Ainsi, les captures d’écran sont plus faciles à réutiliser ou à reproduire dans les versions localisées de la documentation.
 
-### Références spécifiques aux versions
+### Références spécifiques à la version
 
 Dans la mesure du possible, évitez toute référence directe à une version spécifique dans tout le contenu de la documentation. La documentation est ainsi plus flexible et extensible pour les versions ultérieures.
