@@ -1,9 +1,9 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
-workflow-type: ht
-translation-type: ht
-source-wordcount: '519'
-ht-degree: 100%
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+workflow-type: tm+mt
+translation-type: tm+mt
+source-wordcount: '518'
+ht-degree: 98%
 
 ---
 # Contribution à la documentation
@@ -49,7 +49,7 @@ Toutes les demandes d’extraction doivent être accompagnées d’un [contrat d
 
 Regardez la vidéo suivante pour un aperçu rapide de la création de problèmes et de demandes d’extraction.
 
->[!VIDEO](https://video.tv.adobe.com/v/27069?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/27069)
 
 ### Contributions des employés d’Adobe
 
@@ -59,4 +59,4 @@ Nous sommes bien sûr heureux de toute contribution et nous examinerons votre co
 
 ## Informations supplémentaires
 
-Pour plus d’informations sur l’utilisation de la plate-forme de création GitHub et la syntaxe Markdown prise en charge, consultez le [Guide du contributeur d’Adobe Docs](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
+Pour plus d’informations sur l’utilisation de la plate-forme de création GitHub et la syntaxe Markdown prise en charge, consultez le [Guide du contributeur d’Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
