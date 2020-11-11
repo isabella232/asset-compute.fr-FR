@@ -9,15 +9,15 @@ user-guide-description: Cette documentation concerne les tâches  [!DNL Asset Co
 breadcrumb-title: Guide d’Asset Compute Service
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
-solution-hub-url: https://docs.adobe.com/content/help/fr-FR/experience-manager-cloud-service/assets/home.html
-getting-started-url: https://docs.adobe.com/content/help/fr-FR/experience-manager-cloud-service/assets/asset-microservices-overview.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 tutorials-title: Tutoriels AEM
-tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/overview.html
+tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: ec2fd2e7c20ad9d104f95724a3970a433ac7d50f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 100%
+source-wordcount: '124'
+ht-degree: 75%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 100%
 + [Guide de l’utilisateur d’Asset Compute Service](home.md)
 + [Présentation](introduction.md)
 + [Notes de mise à jour](release-notes.md)
-+ [Formats de fichiers pris en charge](https://docs.adobe.com/content/help/fr-FR/experience-manager-cloud-service/assets/file-format-support.html)
++ [Formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Architecture](architecture.md)
 + [Références d’API](api.md)
 + Extension d’Asset Compute Service {#extend}
@@ -37,6 +37,6 @@ ht-degree: 100%
    + [Développement d’une application personnalisée](develop-custom-application.md)
    + [Test d’une application personnalisée](test-custom-application.md)
    + [Déploiement d’une application personnalisée](deploy-custom-application.md)
-   + [Intégration et utilisation dans Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/fr-FR/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [Intégration et utilisation dans Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [Résolution des problèmes](troubleshooting.md)
 + [Contribution au projet open source](contribute-to-compute-service.md)
