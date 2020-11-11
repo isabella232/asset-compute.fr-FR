@@ -1,11 +1,11 @@
 ---
 title: Développer pour  [!DNL Asset Compute Service].
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
-translation-type: ht
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
-workflow-type: ht
-source-wordcount: '1496'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
+workflow-type: tm+mt
+source-wordcount: '1559'
+ht-degree: 96%
 
 ---
 
@@ -96,7 +96,13 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Ajoutez les informations d’identification S3 ou Azure Storage. Vous n’avez besoin d’accéder qu’à une seule solution d’espace de stockage dans le cloud.
+1. Si le fichier ne `console.json` se trouve pas directement à la racine de votre application Firefly, ajoutez le chemin d’accès absolu au fichier JSON d’intégration de la Console développeur d’Adobes. Il s’agit du même [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) fichier que celui téléchargé dans l’espace de travail du projet. Vous pouvez également utiliser la commande `aio app use <path_to_console_json>` au lieu d’ajouter le chemin d’accès à votre fichier ENV.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+   ```
+
+1. Ajoutez les informations d&#39;identification S3 ou Azure enregistrement. Vous n’avez besoin d’accéder qu’à une seule solution d’espace de stockage dans le cloud.
 
    ```conf
    # S3 credentials
