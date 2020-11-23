@@ -1,9 +1,9 @@
 ---
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '518'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 # Contribution à la documentation
@@ -49,7 +49,7 @@ Toutes les demandes d’extraction doivent être accompagnées d’un [contrat d
 
 Regardez la vidéo suivante pour un aperçu rapide de la création de problèmes et de demandes d’extraction.
 
->[!VIDEO](https://video.tv.adobe.com/v/27069)
+>[!VIDEO](https://video.tv.adobe.com/v/27069?captions=fre_fr)
 
 ### Contributions des employés d’Adobe
 
