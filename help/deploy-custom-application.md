@@ -1,9 +1,9 @@
 ---
 title: Déploiement d’une application personnalisée  [!DNL Asset Compute Service] .
 description: Déploiement d’une application personnalisée  [!DNL Asset Compute Service] .
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 100%
 
