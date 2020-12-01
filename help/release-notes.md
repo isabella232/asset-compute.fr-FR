@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’ [!DNL Asset Compute Service].
 description: Nouvelles fonctionnalités, améliorations et problèmes connus dans  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 Voici la première version d’[!DNL Asset Compute Service]. Il s’agit d’un service évolutif et extensible d’[!DNL Adobe Experience Cloud] destiné à traiter des ressources numériques. Il permet d’obtenir différents rendus à partir des images, des vidéos, des documents et d’autres formats de fichiers, notamment sous forme de miniatures, de texte extrait, de métadonnées et d’archives.
 
-Actuellement, [!DNL Asset Compute Service] ne peut être utilisé que par [!DNL Experience Manager] as a Cloud Service.
+Actuellement, [!DNL Asset Compute Service] ne peut être utilisé que par [!DNL Experience Manager] as a [!DNL Cloud Service].
 
 ## Limites et problèmes connus {#known-limitations}
 
