@@ -2,9 +2,9 @@
 title: Comprendre l’extension d’ [!DNL Asset Compute Service].
 description: Quand et comment étendre les fonctionnalités d’ [!DNL Asset Compute Service]  pour effectuer un traitement personnalisé des ressources.
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '265'
 ht-degree: 100%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 100%
 
 # Introduction à l’extensibilité {#introduction-to-extensibilty}
 
-De nombreuses exigences de rendu, comme la conversion des formats et le redimensionnement des images, sont prises en charge par les [Profils de traitement dans  [!DNL Experience Manager]  as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). Les exigences plus complexes peuvent nécessiter une solution personnalisée adaptée aux besoins d’une entreprise. Il est ainsi possible d’étendre [!DNL Asset Compute Service] en créant des applications personnalisées appelées à partir de profils de traitement dans [!DNL Experience Manager]. Ces applications personnalisées s’adaptent aux [cas d’utilisation pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+De nombreuses exigences de rendu, comme la conversion des formats et le redimensionnement des images, sont prises en charge par les [Profils de traitement dans  [!DNL Experience Manager]  as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). Les exigences plus complexes peuvent nécessiter une solution personnalisée adaptée aux besoins d’une entreprise. Il est ainsi possible d’étendre [!DNL Asset Compute Service] en créant des applications personnalisées appelées à partir de profils de traitement dans [!DNL Experience Manager]. Ces applications personnalisées s’adaptent aux [cas d’utilisation pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] est disponible uniquement pour une utilisation avec [!DNL Experience Manager] as a Cloud Service.
+>[!DNL Asset Compute Service] est disponible uniquement pour une utilisation avec [!DNL Experience Manager] as a [!DNL Cloud Service].
 
 Les applications personnalisées sont des applications [Project Firefly](https://github.com/AdobeDocs/project-firefly) sans interface utilisateur graphique. Il est plus simple d’étendre [!DNL Asset Compute Service] à l’aide d’applications personnalisées grâce au [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk) et à l’outil de développement Project Firefly. Les développeurs peuvent ainsi se consacrer essentiellement à la logique commerciale. La création d’applications personnalisées est aussi simple que la création d’une action Adobe I/O Runtime sans serveur de type ordinaire. Il s’agit d’une fonction JavaScript Node.js unique. L’[exemple d’application personnalisée de base](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) en est une illustration.
 
@@ -26,7 +26,7 @@ Veillez à respecter les conditions préalables suivantes :
 
 * Les outils Project Firefly sont installés sur votre machine.
 * Une organisation [!DNL Experience Cloud]. Plus d’informations [ici](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
-* [!DNL Experience Manager] as a Cloud Service doit être activé pour l’organisation Experience.
+* [!DNL Experience Manager] as a doit être activé pour l’organisation Experience.[!DNL Cloud Service]
 * L’organisation [!DNL Adobe Experience Cloud] fait partie du programme de préversion pour les développeurs [!DNL Project Firefly]. Voir [Comment demander l’accès](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
 * Veillez à ce que le développeur ait un rôle de développeur ou des autorisations d’administrateur au sein de l’organisation.
 * Veillez aussi à ce que l’[Adobe I/O CLI](https://github.com/adobe/aio-cli) soit installée localement.
