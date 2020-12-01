@@ -1,9 +1,9 @@
 ---
-source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
-workflow-type: ht
-translation-type: ht
-source-wordcount: '650'
-ht-degree: 100%
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+workflow-type: tm+mt
+translation-type: tm+mt
+source-wordcount: '646'
+ht-degree: 95%
 
 ---
 # Instructions pour contribuer à la documentation
@@ -32,7 +32,7 @@ Font exception à cette règle les notes de mise à jour, qui permettent de rép
 
 Toutes les idées sous forme de contributions susceptibles d’améliorer la documentation sont les bienvenues. Toutefois, les commentaires, les demandes et les demandes d’extraction sont destinés uniquement aux *contributions*. Leur finalité n’est pas de répondre à vos questions sur l’utilisation du produit, la mise en œuvre de projets ou la résolution de problèmes techniques.
 
-Toute question relative à l’utilisation ou à la résolution d’erreurs techniques doit être soumise au moyen du processus d’assistance classique par le biais du [Portail d’assistance entreprise d’Experience Cloud](https://helpx.adobe.com/fr/contact/enterprise-support.ec.html) ou posée à la [communauté Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Toute question concernant l&#39;utilisation ou les erreurs techniques que vous pourriez avoir doit être signalée via le processus d&#39;assistance normal via le [[!DNL Experience Cloud] portail d&#39;assistance aux entreprises](https://helpx.adobe.com/fr/contact/enterprise-support.ec.html) ou abordée dans la [[!DNL Experience Manager] communauté](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 Les contributions à la documentation ne remplacent pas l’Assistance clientèle d’Adobe et toute contribution de ce type visant à obtenir des réponses à des questions d’assistance sera refusée.
 
