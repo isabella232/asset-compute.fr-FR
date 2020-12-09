@@ -1,11 +1,11 @@
 ---
 title: Déploiement d’une application personnalisée  [!DNL Asset Compute Service] .
 description: Déploiement d’une application personnalisée  [!DNL Asset Compute Service] .
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '183'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -16,9 +16,9 @@ Pour déployer votre application, utilisez la commande [aio app deploy](https://
 
 Pour obtenir la même URL sans redéployer l’application, utilisez la commande [`aio app get-url`](https://github.com/adobe/aio-cli#aio-appget-url-action).
 
-Utilisez l’URL dans un [Profil de traitement dans [!DNL Experience Manager] comme  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) pour intégrer votre application à [!DNL Experience Manager] en tant que [!DNL Cloud Service].
+Utilisez l’URL dans un [profil de traitement d’ [!DNL Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=fr) pour intégrer votre application avec [!DNL Experience Manager] as a [!DNL Cloud Service].
 
-Veillez à ce que votre projet et votre espace de travail Firefly correspondent à l’environnement [!DNL Experience Manager] as a dans lequel vous souhaitez utiliser votre action. [!DNL Cloud Service] Il dispose de différents environnements de développement, d’évaluation et de production. Vous pouvez vérifier l’environnement en vérifiant les informations d’identification `AIO_runtime_*` définies dans votre fichier ENV dans la racine de votre application Firefly. Par exemple, pour effectuer un déploiement dans un espace de travail `Stage`, le format de l’`AIO_runtime_namespace` est `xxxxxx_xxxxxxxxx_stage`. Pour l’intégrer avec l’environnement de production [!DNL Experience Manager][!DNL Cloud Service] as a , utilisez les URL d’application de votre espace de travail `Production` Firefly.
+Veillez à ce que votre projet et votre espace de travail Firefly correspondent à l’environnement [!DNL Experience Manager] as a [!DNL Cloud Service] dans lequel vous souhaitez utiliser votre action. Il dispose de différents environnements de développement, d’évaluation et de production. Vous pouvez vérifier l’environnement en vérifiant les informations d’identification `AIO_runtime_*` définies dans votre fichier ENV dans la racine de votre application Firefly. Par exemple, pour effectuer un déploiement dans un espace de travail `Stage`, le format de l’`AIO_runtime_namespace` est `xxxxxx_xxxxxxxxx_stage`. Pour l’intégrer avec l’environnement de production [!DNL Experience Manager] as a [!DNL Cloud Service], utilisez les URL d’application de votre espace de travail `Production` Firefly.
 
 >[!CAUTION]
 >
@@ -26,5 +26,5 @@ Veillez à ce que votre projet et votre espace de travail Firefly correspondent 
 
 >[!MORELIKETHIS]
 >
->* [Comprendre et gérer les environnements  [!DNL Experience Manager] en tant que [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html).
+>* [Comprendre et gérer les environnements dans  [!DNL Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=fr).
 
