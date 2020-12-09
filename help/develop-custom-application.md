@@ -1,9 +1,9 @@
 ---
 title: Développer pour  [!DNL Asset Compute Service].
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1557'
 ht-degree: 100%
 
