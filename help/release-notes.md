@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’ [!DNL Asset Compute Service].
 description: Nouvelles fonctionnalités, améliorations et problèmes connus dans  [!DNL Asset Compute Service].
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '191'
 ht-degree: 100%
 
