@@ -1,11 +1,11 @@
 ---
 title: API HTTP [!DNL Asset Compute Service].
 description: API HTTP [!DNL Asset Compute Service] pour créer des applications personnalisées.
-translation-type: ht
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
-workflow-type: ht
-source-wordcount: '2921'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+workflow-type: tm+mt
+source-wordcount: '2906'
+ht-degree: 98%
 
 ---
 
@@ -68,11 +68,11 @@ Pour cela, le projet [!DNL Adobe Developer Console] doit être abonné aux servi
    * Metascope : `asset_compute_meta`
    * Portées : `asset_compute,read_organizations`
 
-* Événements Adobe I/O
+* [!DNL Adobe I/O] Événements
    * Metascope : `event_receiver_api`
    * Portées : `event_receiver,event_receiver_api`
 
-* API Adobe I/O Management
+* [!DNL Adobe I/O] API de gestion
    * Metascope : `ent_adobeio_sdk`
    * Portées : `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
@@ -183,7 +183,7 @@ Les codes d’état sont les suivants :
    }
    ```
 
-* **429 Too many requests** : survient lorsque le système est surchargé. Les clients doivent effectuer un nouvel essai avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
+* **429 Too many requests** : survient lorsque le système est surchargé. Les clients doivent effectuer un nouvel essai avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
 
 * **Error 4xx** : survient lorsqu’une autre erreur client s’est produite et que l’annulation de l’enregistrement a échoué. Généralement, une réponse JSON de ce type est renvoyée, même si ce n’est pas garanti pour toutes les erreurs :
 
@@ -322,7 +322,7 @@ Codes d’état :
 
 * **401 Unauthorized** : lorsque la requête ne dispose pas d’une [authentification](#authentication-and-authorization) valide. Il peut s’agir, par exemple, d’un jeton d’accès ou d’une clé d’API non valide.
 * **403 Forbidden** : lorsque la demande ne dispose pas d’une [autorisation](#authentication-and-authorization) valide. Par exemple, si le jeton d’accès est valide, mais que le projet Adobe Developer Console (compte technique) n’est pas abonné à tous les services requis.
-* **429 Too many requests** : lorsque le système est surchargé de requêtes issues de ce client ou en général. Les clients peuvent effectuer un nouvel essai avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
+* **429 Too many requests** : lorsque le système est surchargé de requêtes issues de ce client ou en général. Les clients peuvent effectuer un nouvel essai avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
 * **Error 4xx** : en cas d’erreur client, quelle qu’elle soit. Généralement, une réponse JSON de ce type est renvoyée, même si ce n’est pas garanti pour toutes les erreurs :
 
    ```json
@@ -343,7 +343,7 @@ Codes d’état :
    }
    ```
 
-La plupart des clients sont susceptibles de réessayer la même requête avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) suite à une erreur, *à l’exception* des problèmes de configuration, comme 401 ou 403, ou des requêtes non valides comme 400. Outre la limitation du débit normal par le biais de réponses 429, une interruption ou une limitation de service temporaire peut entraîner des erreurs 5xx. Il est dans ce cas conseillé de réessayer après un certain temps.
+La plupart des clients sont susceptibles de réessayer la même requête avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) suite à une erreur, *à l’exception* des problèmes de configuration, comme 401 ou 403, ou des requêtes non valides comme 400. Outre la limitation du débit normal par le biais de réponses 429, une interruption ou une limitation de service temporaire peut entraîner des erreurs 5xx. Il est dans ce cas conseillé de réessayer après un certain temps.
 
 Toutes les réponses JSON (le cas échéant) incluent la valeur `requestId`, identique à celle de l’en-tête `X-Request-Id`. Il est recommandé de lire les informations contenues dans l’en-tête, puisqu’il est toujours présent. La valeur `requestId` est également renvoyée dans tous les événements relatifs aux requêtes de traitement sous la forme `requestId`. Les clients ne doivent pas présumer du format de cette chaîne, car il s’agit d’un identifiant de chaîne opaque.
 
@@ -382,7 +382,7 @@ Il s’agit des options disponibles pour le tableau `renditions` dans [/process]
 
 ### Champs spécifiques au rendu {#rendition-specific-fields}
 
-Pour obtenir la liste des formats de fichiers actuellement pris en charge, voir [Formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr).
+Pour obtenir la liste des formats de fichiers actuellement pris en charge, voir [Formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 | Nom | Type | Description | Exemple |
 |-------------------|----------|-------------|---------|
@@ -412,9 +412,9 @@ Le format PNG est utilisé comme filigrane.
 
 ## Événements asynchrones {#asynchronous-events}
 
-Une fois le traitement d’un rendu terminé ou si une erreur se produit, un événement est envoyé à un [journal des événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Les clients doivent écouter l’URL du journal fournie par le biais de [/register](#register). La réponse du journal comprend un tableau `event` constitué d’un objet pour chaque événement, dont le champ `event` contient la charge utile réelle de l’événement.
+Une fois le traitement d’un rendu terminé ou si une erreur se produit, un événement est envoyé à un [[!DNL Adobe I/O] journal des événements ](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Les clients doivent écouter l’URL du journal fournie par le biais de [/register](#register). La réponse du journal comprend un tableau `event` constitué d’un objet pour chaque événement, dont le champ `event` contient la charge utile réelle de l’événement.
 
-Le type Événement Adobe I/O pour tous les événements [!DNL Asset Compute Service] est `asset_compute`. Le journal est automatiquement abonné exclusivement à ce type d’événement et il n’est pas nécessaire d’effectuer un filtrage en fonction du type Événement Adobe I/O. Les types d’événements spécifiques au service sont disponibles dans la propriété `type` de l’événement.
+Le Type d&#39;événement [!DNL Adobe I/O] pour tous les événements du [!DNL Asset Compute Service] est `asset_compute`. Le journal est automatiquement abonné à ce type d&#39;événement uniquement et il n&#39;est pas nécessaire de le filtrer en fonction du Type d&#39;événement [!DNL Adobe I/O]. Les types d’événements spécifiques au service sont disponibles dans la propriété `type` de l’événement.
 
 ### Types d’événements {#event-types}
 
