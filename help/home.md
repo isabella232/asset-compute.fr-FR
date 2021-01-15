@@ -1,10 +1,10 @@
 ---
 title: Guide de l’utilisateur [!DNL Adobe Asset Compute Service].
 description: Cette documentation concerne les tâches  [!DNL Asset Compute Service] , avec notamment l’introduction, le développement, la gestion, le déploiement et le dépannage de votre code personnalisé.
-translation-type: ht
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
-workflow-type: ht
-source-wordcount: '190'
+translation-type: tm+mt
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+workflow-type: tm+mt
+source-wordcount: '187'
 ht-degree: 100%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # À propos d’[!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] est un service évolutif et extensible d’Adobe Experience Cloud destiné à traiter des ressources numériques. Il permet de transformer des images, des vidéos, des documents et d’autres formats de fichier en rendus, notamment sous forme de miniatures, de texte extrait, de métadonnées et d’archives. Les développeurs peuvent ajouter des applications personnalisées (également appelées programmes de travail personnalisés) pour traiter des cas d’utilisation particuliers, créés à l’aide de [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) et exécutés dans l’environnement sans serveur [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] est un service évolutif et extensible d’Adobe Experience Cloud destiné à traiter des ressources numériques. Il permet de transformer des images, des vidéos, des documents et d’autres formats de fichier en rendus, notamment sous forme de miniatures, de texte extrait, de métadonnées et d’archives. Les développeurs peuvent ajouter des applications personnalisées (également appelées programmes de travail personnalisés) pour traiter des cas d’utilisation particuliers, créés à l’aide de [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) et exécutés dans l’environnement sans serveur [[!DNL Adobe I/O]  Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 Cette documentation concerne des sujets relatifs à [!DNL Asset Compute Service], notamment le développement, la gestion, la gestion, le déploiement et le dépannage de votre code personnalisé. Pour savoir en quoi consiste [!DNL Asset Compute Service], consultez cette [introduction](introduction.md). Découvrez [ce que le service peut vous apporter](introduction.md#possible-use-cases-benefits).
 
