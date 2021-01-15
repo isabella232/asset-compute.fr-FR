@@ -2,9 +2,9 @@
 title: Test et débogage d’une application personnalisée  [!DNL Asset Compute Service] .
 description: Test et débogage d’une application personnalisée  [!DNL Asset Compute Service] .
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,7 @@ Le framework de test unitaire d’application Asset Compute permet de tester les
 
 ### Ajout de tests {#add-tests}
 
-Les tests doivent être placés dans le dossier `test` au niveau racine du projet AIO. Les cas de test pour chaque application doivent se trouver dans le chemin d’accès `test/asset-compute/<worker-name>`, avec un dossier pour chaque cas :
+Les tests doivent être placés dans le dossier `test` au niveau racine du projet [!DNL Adobe I/O] Les cas de test pour chaque application doivent se trouver dans le chemin d’accès `test/asset-compute/<worker-name>`, avec un dossier pour chaque cas :
 
 ```yaml
 action/
