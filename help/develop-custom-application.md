@@ -2,10 +2,10 @@
 title: Développer pour  [!DNL Asset Compute Service].
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 96%
+source-wordcount: '1562'
+ht-degree: 94%
 
 ---
 
@@ -282,7 +282,7 @@ En raison du traitement plus étendu généralement effectué par les applicatio
 
 Le délai d’expiration par défaut pour les actions du Runtime est d’une minute, mais il peut être augmenté en définissant la limite `timeout` (en millisecondes). Si vous prévoyez de traiter des fichiers plus volumineux, augmentez cette durée. Tenez compte du temps total nécessaire pour télécharger la source, traiter le fichier et charger le rendu. Si une action atteint le délai d’expiration, c’est-à-dire si elle ne renvoie pas l’activation avant la limite de délai spécifiée, le Runtime ignore le conteneur et ne le réutilise pas.
 
-Les applications Asset Compute tendent par nature à être liées aux entrées-sorties réseau et disque. Le fichier source doit d’abord être téléchargé. Le traitement est souvent lourd en termes d’entrées-sorties et les rendus résultants sont ensuite chargés à nouveau.
+Les applications d&#39;Asset compute par nature tendent à être liées au réseau et au disque. Le fichier source doit d’abord être téléchargé, le traitement nécessite souvent beaucoup de ressources, puis les rendus résultants sont à nouveau téléchargés.
 
 La mémoire disponible pour un conteneur d’action est spécifiée par le paramètre `memorySize` en Mo. Actuellement, il définit également le niveau d’accès du conteneur à l’unité centrale. Il s’agit surtout d’un élément clé du coût d’utilisation du Runtime (les conteneurs plus volumineux coûtent plus cher). Utilisez ici une valeur plus élevée lorsque votre traitement nécessite davantage de mémoire ou d’unité centrale. Veillez toutefois à ne pas gaspiller les ressources, car plus les conteneurs sont volumineux, plus le débit global est faible.
 
