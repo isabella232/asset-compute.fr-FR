@@ -1,11 +1,11 @@
 ---
 title: Définissez l’environnement de développement requis pour  [!DNL Asset Compute Service].
 description: Configuration de l’environnement de développement  [!DNL Asset Compute Service]  pour commencer à créer et tester le code personnalisé.
-translation-type: ht
-source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
-workflow-type: ht
-source-wordcount: '373'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
    * [Docker Desktop](https://www.docker.com/get-started).
    * [NodeJS](https://nodejs.org) (LTS v10 à v12, les versions impaires ne sont pas recommandées) et [NPM](https://www.npmjs.com). L’utilisateur d’OSX HomeBrew peut exécuter `brew install node` pour installer l’un et l’autre. Sinon, vous pouvez effectuer le téléchargement sur la [page de téléchargement de NodeJS](https://nodejs.org/fr/).
    * Comme IDE adapté à NodeJS, nous recommandons [Visual Studio Code (VS Code)](https://code.visualstudio.com), car c’est l’IDE pris en charge pour le débogueur. Vous pouvez utiliser un autre IDE à titre d’éditeur de code, mais il n’y a pas encore de prise en charge pour une utilisation avancée (un débogueur, par exemple).
-   * [Interface de ligne de commande AIO](https://github.com/adobe/aio-cli) (`aio`) : installation à l’aide de la commande `npm install -g @adobe/aio-cli`.
+   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installation à l&#39;aide  `npm install -g @adobe/aio-cli`.
 
 1. Veillez à respecter les [conditions préalables](/help/understand-extensibility.md#prerequisites-and-provisioning).
 
