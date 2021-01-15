@@ -1,11 +1,11 @@
 ---
 title: Comprendre l’extension d’ [!DNL Asset Compute Service].
 description: Quand et comment étendre les fonctionnalités d’ [!DNL Asset Compute Service]  pour effectuer un traitement personnalisé des ressources.
-translation-type: ht
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
-workflow-type: ht
-source-wordcount: '265'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 92%
 
 ---
 
@@ -18,7 +18,7 @@ De nombreuses exigences de rendu, comme la conversion des formats et le redimens
 >
 >[!DNL Asset Compute Service] est disponible uniquement pour une utilisation avec [!DNL Experience Manager] as a [!DNL Cloud Service].
 
-Les applications personnalisées sont des applications [Project Firefly](https://github.com/AdobeDocs/project-firefly) sans interface utilisateur graphique. Il est plus simple d’étendre [!DNL Asset Compute Service] à l’aide d’applications personnalisées grâce au [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk) et à l’outil de développement Project Firefly. Les développeurs peuvent ainsi se consacrer essentiellement à la logique commerciale. La création d’applications personnalisées est aussi simple que la création d’une action Adobe I/O Runtime sans serveur de type ordinaire. Il s’agit d’une fonction JavaScript Node.js unique. L’[exemple d’application personnalisée de base](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) en est une illustration.
+Les applications personnalisées sont des applications [Project Firefly](https://github.com/AdobeDocs/project-firefly) sans interface utilisateur graphique. Il est plus simple d’étendre [!DNL Asset Compute Service] à l’aide d’applications personnalisées grâce au [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk) et à l’outil de développement Project Firefly. Les développeurs peuvent ainsi se consacrer essentiellement à la logique commerciale. La création d&#39;applications personnalisées est aussi simple que la création d&#39;une action d&#39;exécution sans serveur [!DNL Adobe I/O]. Il s’agit d’une fonction JavaScript Node.js unique. L’[exemple d’application personnalisée de base](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) en est une illustration.
 
 ## Conditions préalables et exigences de configuration {#prerequisites-and-provisioning}
 
@@ -29,7 +29,7 @@ Veillez à respecter les conditions préalables suivantes :
 * [!DNL Experience Manager] as a [!DNL Cloud Service] doit être activé pour l’organisation Experience.
 * L’organisation [!DNL Adobe Experience Cloud] fait partie du programme de préversion pour les développeurs [!DNL Project Firefly]. Voir [Comment demander l’accès](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
 * Veillez à ce que le développeur ait un rôle de développeur ou des autorisations d’administrateur au sein de l’organisation.
-* Veillez aussi à ce que l’[Adobe I/O CLI](https://github.com/adobe/aio-cli) soit installée localement.
+* Assurez-vous que [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) est installé localement.
 
 <!-- TBD for later:
 
