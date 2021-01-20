@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
 source-wordcount: '1562'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -39,7 +39,7 @@ Assurez-vous que [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) est in
    create console.json
    ```
 
-1. Lorsque vous y êtes invité avec `Which Adobe I/O App features do you want to enable for this project?`, sélectionnez `Actions`. Veillez à désélectionner l’option `Web Assets` car les ressources Web utilisent différentes vérifications d’authentification et d’autorisation.
+1. Lorsque l’invite `Which Adobe I/O App features do you want to enable for this project?` s’affiche, sélectionnez `Actions`. Veillez à désélectionner l’option `Web Assets` car les ressources Web utilisent différentes vérifications d’authentification et d’autorisation.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -187,7 +187,7 @@ Par exemple, [`worker-animal-pictures`](https://github.com/adobe/asset-compute-e
 
 ### Transmission de paramètres personnalisés {#pass-custom-parameters}
 
-Vous pouvez transmettre des paramètres personnalisés définis à l’aide des objets de rendu. Ils peuvent être référencés dans l’application au moyen d’instructions [`rendition`](https://github.com/adobe/asset-compute-sdk#rendition). Voici un exemple d’objet de rendu :
+Vous pouvez transmettre des paramètres personnalisés définis à l’aide des objets de rendu. Ils peuvent être référencés dans l’application au moyen d’[`rendition`instructions](https://github.com/adobe/asset-compute-sdk#rendition). Voici un exemple d’objet de rendu :
 
 ```json
 "renditions": [
