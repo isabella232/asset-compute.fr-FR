@@ -1,11 +1,11 @@
 ---
-title: Introduction à  [!DNL Asset Compute Service].
+title: Présentation du fichier  [!DNL Asset Compute Service]
 description: '[!DNL Asset Compute Service] est un service de traitement des ressources natif dans le cloud destiné à réduire la complexité et à améliorer l’évolutivité.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
