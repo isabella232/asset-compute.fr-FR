@@ -1,11 +1,11 @@
 ---
-title: Comprendre l’extension d’ [!DNL Asset Compute Service].
+title: Comprendre comment étendre  [!DNL Asset Compute Service]
 description: Quand et comment étendre les fonctionnalités d’ [!DNL Asset Compute Service]  pour effectuer un traitement personnalisé des ressources.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 92%
+ht-degree: 91%
 
 ---
 
