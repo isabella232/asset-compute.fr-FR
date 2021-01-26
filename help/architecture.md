@@ -5,14 +5,14 @@ translation-type: tm+mt
 source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
 
 # Architecture d’[!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] est construit sur la plate-forme d&#39;exécution [!DNL Adobe I/O] sans serveur. Il permet la prise en charge des ressources par les services de contenu Adobe Sensei. Le client appelant (uniquement si [!DNL Experience Manager] as a [!DNL Cloud Service] est pris en charge) reçoit les informations générées par Adobe Sensei qu’il a recherchées pour la ressource. Les informations renvoyées sont au format JSON.
+[!DNL Asset Compute Service] repose sur la plate-forme Runtime [!DNL Adobe I/O] sans serveur. Il permet la prise en charge des ressources par les services de contenu Adobe Sensei. Le client appelant (uniquement si [!DNL Experience Manager] as a [!DNL Cloud Service] est pris en charge) reçoit les informations générées par Adobe Sensei qu’il a recherchées pour la ressource. Les informations renvoyées sont au format JSON.
 
 [!DNL Asset Compute Service] est extensible en créant des applications personnalisées basées sur [!DNL Project Firefly]. Ces applications personnalisées sont des applications [!DNL Project Firefly] sans interface utilisateur graphique. Elles effectuent des tâches comme l’ajout d’outils de conversion personnalisés ou l’appel d’API externes pour réaliser des opérations sur des images.
 
@@ -22,7 +22,7 @@ Les fondements de l’architecture sont les suivants :
 
 * La modularité des applications (qui ne contiennent que le nécessaire pour une tâche donnée) permet de les découpler les unes des autres et d’en maintenir la légèreté.
 
-* Le concept sans serveur de l’exécution [!DNL Adobe I/O] présente de nombreux avantages : le traitement asynchrone, hautement évolutif, isolé et basé sur les tâches, qui est idéal pour le traitement des ressources.
+* Le concept sans serveur de Runtime [!DNL Adobe I/O] présente de nombreux avantages : le traitement asynchrone, hautement évolutif, isolé et basé sur les tâches est idéal pour le traitement des ressources.
 
 * Le stockage des contenus binaires dans le cloud apporte les fonctionnalités nécessaires pour stocker et accéder individuellement aux fichiers et aux rendus de ressources, sans exiger d’autorisations d’accès complètes au stockage grâce à des références à des URL présignées. L’accélération du transfert, la mise en cache du réseau de diffusion de contenu et la co-localisation des applications informatiques avec l’espace de stockage dans le cloud permettent un accès aux contenus optimal à faible latence. Les clouds AWS et Azure sont pris en charge.
 
@@ -32,7 +32,7 @@ Les fondements de l’architecture sont les suivants :
 
 L’architecture se compose des parties suivantes :
 
-* **Une couche d’API et d’orchestration** reçoit les requêtes (au format JSON) qui demandent au service de transformer une ressource source en différents rendus. Les requêtes sont asynchrones et renvoyées avec un ID d’activation, c’est-à-dire un ID de tâche. Les instructions sont purement déclaratives et, pour tous les travaux de traitement standard (par exemple, génération de miniatures, extraction de texte), les consommateurs ne précisent que le résultat souhaité, mais pas les applications qui traitent certains rendus. Les fonctionnalités d&#39;API génériques telles que l&#39;authentification, les analyses, la limitation de débit, sont gérées à l&#39;aide de la passerelle API d&#39;Adobe devant le service et gèrent toutes les requêtes allant à l&#39;exécution [!DNL Adobe I/O]. Le routage de l’application est effectué dynamiquement par la couche d’orchestration. Les clients peuvent spécifier une application personnalisée pour des rendus spécifiques et inclure des paramètres personnalisés. L&#39;exécution de l&#39;application peut être entièrement mise en parallèle car il s&#39;agit de fonctions sans serveur distinctes dans [!DNL Adobe I/O] Runtime.
+* **Une couche d’API et d’orchestration** reçoit les requêtes (au format JSON) qui demandent au service de transformer une ressource source en différents rendus. Ces requêtes sont asynchrones et renvoyées avec un ID d’activation équivalente à l’ID de la tâche. Les instructions sont purement déclaratives et, pour tous les travaux de traitement standard (par exemple, génération de miniatures, extraction de texte), les consommateurs ne précisent que le résultat souhaité, mais pas les applications qui traitent certains rendus. Les fonctionnalités d’API génériques telles que l’authentification, l’analyse et la limitation de débit sont gérées à l’aide de la passerelle API d’Adobe en lien avec le service et gèrent toutes les requêtes adressées à Runtime [!DNL Adobe I/O]. Le routage de l’application est effectué dynamiquement par la couche d’orchestration. Les clients peuvent spécifier une application personnalisée pour des rendus spécifiques et inclure des paramètres personnalisés. Il est possible de mettre intégralement en parallèle l’exécution des applications, car il s’agit de fonctions distinctes sans serveur dans Runtime [!DNL Adobe I/O].
 
 * **Applications de traitement des ressources** spécialisées dans certains types de formats de fichiers ou de rendus de cible. D’un point de vue conceptuel, une application ressemble au concept pipe d’Unix : un fichier d’entrée est transformé en un ou plusieurs fichiers de sortie.
 
