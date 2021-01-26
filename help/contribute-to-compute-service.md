@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 88%
+ht-degree: 97%
 
 ---
 
@@ -22,11 +22,11 @@ Pour plus de détails, consultez les [Directives concernant les contributions](h
 
 ## Ressources et bibliothèques disponibles {#available-resources}
 
-Consultez cette liste de [bibliothèques open source](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) pour [!DNL Asset Compute Service]. En outre, les ressources d&#39;exécution et d&#39;OpenWhisk [!DNL Adobe I/O] disponibles sont les suivantes :
+Consultez cette liste de [bibliothèques open source](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) pour [!DNL Asset Compute Service]. En outre, les ressources Runtime et OpenWhisk [!DNL Adobe I/O] suivantes sont à votre disposition :
 
 * [Prise en main d’Apache OpenWhisk](https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [Lab : Créez une IA compostable  [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] avecRuntime](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* [[!DNL Adobe I/O] FAQ sur l’exécution](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
+* [Atelier : créez une IA modulable avec Runtime  [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] ](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* FAQ Runtime [[!DNL Adobe I/O] ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
 * Link to Firefly open-source components.
