@@ -36,7 +36,7 @@ Le framework de test unitaire d’application Asset Compute permet de tester les
 
 ### Ajout de tests {#add-tests}
 
-Les tests doivent être placés dans le dossier `test` au niveau racine du projet [!DNL Adobe I/O] Les cas de test pour chaque application doivent se trouver dans le chemin d’accès `test/asset-compute/<worker-name>`, avec un dossier pour chaque cas :
+Les tests doivent être placés dans le dossier `test` au niveau racine du projet [!DNL Adobe I/O]. Les cas de test pour chaque application doivent se trouver dans le chemin d’accès `test/asset-compute/<worker-name>`, avec un dossier pour chaque cas :
 
 ```yaml
 action/
