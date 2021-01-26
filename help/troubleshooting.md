@@ -1,16 +1,16 @@
 ---
-title: Résolution des problèmes d’ [!DNL Asset Compute Service]
+title: Résolution des problèmes [!DNL Asset Compute Service]
 description: Dépanner et déboguer les applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 translation-type: tm+mt
 source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '288'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
 
-# Résolution des problèmes d’{#troubleshoot}
+# Résolution des problèmes {#troubleshoot}
 
 Voici quelques conseils de dépannage génériques qui peuvent vous aider à résoudre les problèmes liés à Asset Compute Service :
 
@@ -19,17 +19,17 @@ Voici quelques conseils de dépannage génériques qui peuvent vous aider à ré
 * Assurez-vous que les erreurs pouvant provenir du nettoyage en cas d’échec ne génèrent pas leurs propres erreurs en masquant le problème d’origine.
 
 * Lors du démarrage initial de l’outil de développement avec une nouvelle intégration [!DNL Asset Compute Service], il se peut que la première demande de traitement échoue, car le journal des événements Asset Compute n’est pas entièrement configuré. Patientez un certain temps pour que le journal soit configuré avant d’envoyer une autre demande.
-* Si vous rencontrez des erreurs lors de l’envoi de requêtes `/register` ou `/process` Asset Compute, assurez-vous que toutes les API nécessaires sont ajoutées au projet et à l’espace de travail , c’est-à-dire Asset Compute,  Events,  Events Management et Runtime.[!DNL Adobe I/O][!DNL Adobe I/O][!DNL Adobe I/O][!DNL Adobe I/O]
+* Si vous rencontrez des erreurs lors de l’envoi de requêtes `/register` ou `/process` Asset Compute, assurez-vous que toutes les API nécessaires sont ajoutées au projet et à l’espace de travail [!DNL Adobe I/O], c’est-à-dire à Asset Compute et à Events[!DNL Adobe I/O], Events Management [!DNL Adobe I/O] et Runtime [!DNL Adobe I/O].
 
-## Connectez-vous aux problèmes via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
+## Problèmes de connexion via l’interface en ligne de commande [!DNL Adobe I/O] {#login-via-aio-cli}
 
-Si vous rencontrez des problèmes lors de la connexion à [!DNL Adobe Developer Console] [l&#39;interface de ligne de commande [!DNL Adobe I/O] CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli), ajoutez manuellement les informations d&#39;identification requises pour le développement, le test et le déploiement de votre application personnalisée :
+Si vous rencontrez des problèmes lors de la connexion à l’[!DNL Adobe Developer Console] [ par le biais de l’interface en ligne de commande  [!DNL Adobe I/O] ](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli), ajoutez manuellement les informations d’identification requises pour le développement, le test et le déploiement de votre application personnalisée :
 
 1. Accédez à votre projet et à votre espace de travail Firefly sur [Adobe Developer Console](https://console.adobe.io/), puis appuyez sur **[!UICONTROL Download]** dans le coin supérieur droit. Ouvrez ce fichier JSON et enregistrez-le à un emplacement sécurisé sur votre ordinateur.
 
 1. Accédez au fichier ENV de votre application Firefly.
 
-1. Ajoutez les informations d’identification d’exécution [!DNL Adobe I/O]. Récupérez les [!DNL Adobe I/O] informations d’identification d’exécution à partir du fichier JSON téléchargé. Les informations d’identification se trouvent dans `project.workspace.services.runtime`. Ajoutez les informations d’identification d’exécution [!DNL Adobe I/O] dans les variables `AIO_runtime_XXX` :
+1. Ajoutez les informations d’identification de Runtime [!DNL Adobe I/O]. Récupérez les informations d’identification Runtime [!DNL Adobe I/O] à partir du fichier JSON téléchargé. Les informations d’identification se trouvent dans `project.workspace.services.runtime`. Ajoutez les informations d’identification Runtime [!DNL Adobe I/O] dans les variables `AIO_runtime_XXX` :
 
    ```json
    AIO_runtime_auth=
