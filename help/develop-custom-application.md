@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '1562'
-ht-degree: 95%
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Avant de commencer à développer une application personnalisée :
 
 ## Création d’une application personnalisée {#create-custom-application}
 
-Assurez-vous que [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) est installé localement.
+Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://github.com/adobe/aio-cli) est installée localement.
 
 1. Pour créer une application personnalisée, [créez une application Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
 
@@ -28,7 +28,7 @@ Assurez-vous que [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) est in
 
    Adobe vous recommande de vous connecter. Si vous rencontrez des problèmes, appliquez les instructions [pour créer une application sans vous connecter](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
-1. Après vous être connecté, suivez les invites de l’interface de ligne de commande et sélectionnez les éléments `Organization`, `Project` et `Workspace` à utiliser pour l’application. Choisissez le projet et l’espace de travail que vous avez créés lors de la [configuration de votre environnement](setup-environment.md).
+1. Après vous être connecté, suivez les invites de l’interface en ligne de commande et sélectionnez les éléments `Organization`, `Project` et `Workspace` à utiliser pour l’application. Choisissez le projet et l’espace de travail que vous avez créés lors de la [configuration de votre environnement](setup-environment.md).
 
    ```sh
    $ aio app init <app-name>
@@ -121,7 +121,7 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
 
 Avant d’exécuter l’application avec l’outil de développement Asset Compute, configurez correctement les [informations d’identification](#developer-tool-credentials).
 
-Pour exécuter l’application dans l’outil de développement, utilisez la commande `aio app run`. Il déploie l’action sur [!DNL Adobe I/O] Runtime et début l’outil de développement sur votre machine locale. Cet outil est utilisé pour tester les demandes des applications au cours du développement. Voici un exemple de demande de rendu :
+Pour exécuter l’application dans l’outil de développement, utilisez la commande `aio app run`. L’action est déployée sur Runtime [!DNL Adobe I/O] et lance l’outil de développement sur votre machine locale. Cet outil est utilisé pour tester les demandes des applications au cours du développement. Voici un exemple de demande de rendu :
 
 ```json
 "renditions": [
@@ -266,7 +266,7 @@ const key = params.secretKey;
 
 ## Dimensionnement des applications {#sizing-workers}
 
-Une application s&#39;exécute dans un conteneur de l&#39;exécution [!DNL Adobe I/O] avec [limites](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) qui peut être configuré par l&#39;intermédiaire de `manifest.yml` :
+Une application s’exécute dans un conteneur Runtime [!DNL Adobe I/O] avec des [limites](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) configurables à l’aide de `manifest.yml` :
 
 ```yaml
     actions:
@@ -282,7 +282,7 @@ En raison du traitement plus étendu généralement effectué par les applicatio
 
 Le délai d’expiration par défaut pour les actions du Runtime est d’une minute, mais il peut être augmenté en définissant la limite `timeout` (en millisecondes). Si vous prévoyez de traiter des fichiers plus volumineux, augmentez cette durée. Tenez compte du temps total nécessaire pour télécharger la source, traiter le fichier et charger le rendu. Si une action atteint le délai d’expiration, c’est-à-dire si elle ne renvoie pas l’activation avant la limite de délai spécifiée, le Runtime ignore le conteneur et ne le réutilise pas.
 
-Les applications d&#39;Asset compute par nature tendent à être liées au réseau et au disque. Le fichier source doit d’abord être téléchargé, le traitement nécessite souvent beaucoup de ressources, puis les rendus résultants sont à nouveau téléchargés.
+Les applications Asset Compute tendent par nature à être liées aux entrées et sorties réseau et disque. Le fichier source doit d’abord être téléchargé (le traitement est souvent lourd en termes de ressource) et les rendus résultants sont ensuite chargés à nouveau.
 
 La mémoire disponible pour un conteneur d’action est spécifiée par le paramètre `memorySize` en Mo. Actuellement, il définit également le niveau d’accès du conteneur à l’unité centrale. Il s’agit surtout d’un élément clé du coût d’utilisation du Runtime (les conteneurs plus volumineux coûtent plus cher). Utilisez ici une valeur plus élevée lorsque votre traitement nécessite davantage de mémoire ou d’unité centrale. Veillez toutefois à ne pas gaspiller les ressources, car plus les conteneurs sont volumineux, plus le débit global est faible.
 
