@@ -2,10 +2,10 @@
 title: Développer pour [!DNL Asset Compute Service]
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -96,11 +96,14 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Si le fichier `console.json` ne se trouve pas directement dans la racine de votre application Firefly, ajoutez le chemin d’accès absolu au fichier JSON d’intégration d’Adobe Developer Console. Il s’agit du même fichier [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet. À titre de variante, vous pouvez également utiliser la commande `aio app use <path_to_console_json>` au lieu d’ajouter le chemin d’accès à votre fichier ENV.
+1. Téléchargez le fichier à partir de la console de développement Adobe. Allez à la racine du projet et cliquez sur &quot;Télécharger tout&quot; dans le coin supérieur droit. Le fichier est téléchargé avec `<namespace>-<workspace>.json` comme nom de fichier. Utilisez l’une des méthodes suivantes :
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * Renommez le fichier en tant que `config.json` et déplacez-le à la racine de votre projet.
+   * Vous pouvez éventuellement ajouter le chemin d’accès absolu au fichier JSON d’intégration de la Console développeur d’Adobes. Il s’agit du même fichier [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Ajoutez les informations d’identification S3 ou de la solution de stockage Azure. Vous n’avez besoin d’accéder qu’à une seule solution d’espace de stockage dans le cloud.
 
@@ -116,6 +119,10 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>Le fichier `config.json` contient des informations d’identification. Dans votre projet, ajoutez le fichier JSON à votre fichier `.gitignore` pour empêcher son partage. Il en va de même pour les fichiers .env et .aio.
 
 ## Exécution de l’application {#run-custom-application}
 
