@@ -1,11 +1,11 @@
 ---
 title: Développer pour [!DNL Asset Compute Service]
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1615'
+ht-degree: 100%
 
 ---
 
@@ -96,10 +96,10 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Téléchargez le fichier à partir de la console de développement Adobe. Allez à la racine du projet et cliquez sur &quot;Télécharger tout&quot; dans le coin supérieur droit. Le fichier est téléchargé avec `<namespace>-<workspace>.json` comme nom de fichier. Utilisez l’une des méthodes suivantes :
+1. Téléchargez le fichier à partir d’Adobe Developer Console. Accédez à la racine du projet et cliquez sur « Tout télécharger » dans l’angle supérieur droit. Le fichier est téléchargé avec `<namespace>-<workspace>.json` comme nom de fichier. Utilisez l’une des méthodes suivantes :
 
-   * Renommez le fichier en tant que `config.json` et déplacez-le à la racine de votre projet.
-   * Vous pouvez éventuellement ajouter le chemin d’accès absolu au fichier JSON d’intégration de la Console développeur d’Adobes. Il s’agit du même fichier [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet.
+   * Renommez le fichier `config.json` et déplacez-le dans la racine de votre projet.
+   * Vous pouvez éventuellement ajouter le chemin d’accès absolu au fichier JSON d’intégration d’Adobe Developer Console. Il s’agit du même fichier [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
