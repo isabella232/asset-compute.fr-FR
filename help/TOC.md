@@ -1,23 +1,23 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: asset compute service
 solution: Experience Manager, Experience Manager Assets
 type: Documentation
-role: Developer
+role: Développeur
 user-guide-title: Guide d’Asset Compute Service
 user-guide-description: Cette documentation concerne les tâches  [!DNL Asset Compute Service]  telles que le développement, la gestion, le déploiement et le dépannage de votre code personnalisé.
 breadcrumb-title: Guide d’Asset Compute Service
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html?lang=fr
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr
+getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 tutorials-title: Tutoriels AEM
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=fr
-translation-type: ht
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
-workflow-type: ht
-source-wordcount: '120'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 1cf682be00c984fa523963f5d4358575efffb50b
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
