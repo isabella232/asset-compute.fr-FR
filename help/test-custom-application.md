@@ -2,11 +2,11 @@
 title: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée
 description: Test et débogage d’une application personnalisée  [!DNL Asset Compute Service] .
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '782'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -173,8 +173,8 @@ La plupart de ces étapes sont généralement automatisées d’usine par `aio`�
 1. Ajoutez à votre fichier JSON de paramètres utilisateur. Il continue à utiliser l’ancien débogueur VS Code, le nouveau a [quelques problèmes](https://github.com/apache/openwhisk-wskdebug/issues/74) avec wskdebug : `"debug.javascript.usePreview": false`.
 1. Fermez toutes les instances d’applications ouvertes via `aio app run`.
 1. Déployez le code le plus récent à l’aide de `aio app deploy`.
-1. Exécutez uniquement l&#39;Asset compute Devtool à l&#39;aide de `aio asset-compute devtool`. Gardez-le ouvert.
-1. Dans l&#39;éditeur de code VS, ajoutez la configuration de débogage suivante à votre `launch.json` :
+1. Exécutez uniquement l’outil Asset Compute Devtool avec `aio asset-compute devtool`. Gardez-le ouvert.
+1. Dans VS Code Editor, ajoutez la configuration de débogage suivante à votre `launch.json` :
 
    ```json
    {
