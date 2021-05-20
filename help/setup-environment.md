@@ -1,14 +1,13 @@
 ---
 title: Définition de l’environnement de développement requis pour [!DNL Asset Compute Service]
 description: Configuration de l’environnement de développement  [!DNL Asset Compute Service]  pour commencer à créer et tester le code personnalisé.
-translation-type: ht
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
-workflow-type: ht
+exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
+source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 100%
 
 ---
-
 
 # Configuration d’un environnement de développement {#create-dev-environment}
 
