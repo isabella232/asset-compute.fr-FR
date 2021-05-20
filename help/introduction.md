@@ -1,16 +1,15 @@
 ---
 title: Introduction à [!DNL Asset Compute Service]
 description: '[!DNL Asset Compute Service] est un service de traitement des ressources natif dans le cloud destiné à réduire la complexité et à améliorer l’évolutivité.'
-translation-type: ht
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
-workflow-type: ht
+exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
+source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 
 ---
 
-
-# Présentation d’[!DNL Asset Compute Service] {#overview}
+# Présentation d’[!DNL Asset Compute Service]  {#overview}
 
 [!DNL Asset Compute Service] est un service évolutif et extensible d’[!DNL Adobe Experience Cloud] destiné à traiter des ressources numériques. Il permet d’obtenir différents rendus à partir des images, des vidéos, des documents et d’autres formats de fichiers, notamment sous forme de miniatures, de texte extrait, de métadonnées et d’archives.
 
@@ -26,7 +25,7 @@ Les développeurs peuvent ainsi ajouter des applications de ressources personnal
 
 [!DNL Asset Compute Service] prend en charge quelques cas d’utilisation métier courants, tels que le traitement de base d’images, les conversions spécifiques aux applications d’Adobe et la création d’applications personnalisées qui orchestrent des besoins métier complexes.
 
-Vous pouvez utiliser le service web [!DNL Asset Compute] afin de générer des miniatures pour différents types de fichiers, ainsi que des rendus d’image de haute qualité pour les [formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr). Voir [Cas d’utilisation pris en charge par le biais d’une configuration personnalisée](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=fr).
+Vous pouvez utiliser le service web [!DNL Asset Compute] afin de générer des miniatures pour différents types de fichiers, ainsi que des rendus d’image de haute qualité pour les [formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr). Voir [Cas d’utilisation pris en charge par le biais d’une configuration personnalisée](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -47,7 +46,7 @@ Vous pouvez utiliser le service web [!DNL Asset Compute] afin de générer des m
 >
 >* [Présentation du traitement des ressources à l’aide de microservices de ressources dans  [!DNL Adobe Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr).
 >* [Documentation de Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
->* [Formats de fichiers pris en charge pour le traitement](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr).
+>* [Formats de fichiers pris en charge pour le traitement](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [Notes de mise à jour d’Asset Compute Service](release-notes.md)
 
 
