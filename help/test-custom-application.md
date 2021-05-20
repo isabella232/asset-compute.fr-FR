@@ -1,11 +1,11 @@
 ---
 title: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée
-description: Test et débogage d’une application personnalisée  [!DNL Asset Compute Service] .
+description: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '811'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -139,7 +139,7 @@ Les cas de tests d’erreur ne doivent pas contenir de fichier `rendition.*` att
 
 >[!NOTE]
 >
->Si un cas de test ne contient pas de fichier `rendition.*` attendu et ne définit pas le `errorReason` attendu dans le fichier `params.json`, il s&#39;agit d&#39;un cas d&#39;erreur avec tout `errorReason`.
+>Si un cas de test ne contient pas un fichier `rendition.*` attendu et ne définit pas la valeur `errorReason` attendue dans le fichier `params.json`, il s’agit d’un cas d’erreur contenant une valeur `errorReason` quelconque.
 
 Structure des cas de tests d’erreur :
 
