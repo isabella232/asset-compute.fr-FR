@@ -10,12 +10,11 @@ breadcrumb-title: Guide d’Asset Compute Service
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html?lang=fr
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr
+getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 tutorials-title: Tutoriels AEM
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=fr
-translation-type: ht
 source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 100%
 
