@@ -1,14 +1,13 @@
 ---
 title: Comprendre le fonctionnement d’une application personnalisée
 description: Fonctionnement interne d’une application personnalisée  [!DNL Asset Compute Service]  pour faciliter votre compréhension.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
+source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 100%
 
 ---
-
 
 # Fonctionnement interne d’une application personnalisée {#how-custom-application-works}
 
@@ -18,7 +17,7 @@ Utilisez l’illustration suivante pour comprendre le workflow de bout en bout l
 
 *Figure : Procédure de traitement d’une ressource à l’aide d’[!DNL Asset Compute Service].*
 
-## Enregistrement {#registration}
+## L’enregistrement {#registration}
 
 Le client doit appeler une fois [`/register`](api.md#register) avant la première requête à [`/process`](api.md#process-request) pour configurer et récupérer l’URL du journal afin de recevoir les événements [!DNL Adobe I/O] pour Adobe Asset Compute.
 
