@@ -2,10 +2,10 @@
 title: API HTTP [!DNL Asset Compute Service]
 description: API HTTP [!DNL Asset Compute Service] pour créer des applications personnalisées.
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: 780ddb7e119a28a1f8cc555ed2f1d3cee543b73f
 workflow-type: tm+mt
 source-wordcount: '2906'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -359,7 +359,7 @@ Les cas d’utilisation pris en charge sont les suivants :
 * Définir la résolution en ppp pour ajuster la taille des rendus à des fins de publication sur ordinateur en ajustant l’échelle appliquée aux pixels. L’opération est définie par `instructions.dpi` dans l’objet de rendu pour modifier la résolution en ppp. Cependant, pour redimensionner l’image afin qu’elle ait la même taille, mais avec une résolution différente, utilisez les instructions `convertToDpi`.
 * Redimensionner l’image pour que sa largeur ou sa hauteur de rendu reste identique à celle de l’image d’origine avec la résolution cible (ppp) spécifiée. L’opération est définie par `instructions.convertToDpi` dans l’objet de rendu.
 
-## Ressources de filigrane {#add-watermark}
+## Mise en filigrane de ressources {#add-watermark}
 
 Le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk) prend en charge l’ajout d’un filigrane aux fichiers d’image PNG, JPEG, TIFF et GIF. Le filigrane est ajouté à la suite des instructions de rendu dans l’objet `watermark`.
 
@@ -376,7 +376,7 @@ Il s’agit des options disponibles pour le tableau `renditions` dans [/process]
 | `fmt` | `string` | Le format de cible des rendus peut également être `text` pour l’extraction de texte et `xmp` pour l’extraction de métadonnées XMP au format xml. Voir [Formats pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr) | `png` |
 | `worker` | `string` | URL d’une [application personnalisée](develop-custom-application.md). Doit être une URL `https://`. Si ce champ est présent, le rendu est créé par une application personnalisée. Tout autre champ de rendu défini est ensuite utilisé dans l’application personnalisée. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL vers laquelle le rendu généré doit être téléchargé à l’aide de PUT HTTP. | `http://w.com/img.jpg` |
-| `target` | `object` | Informations de chargement d’URL présignées en plusieurs parties pour le rendu généré. Il s’agit d’un chargement [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) avec ce [comportement de chargement en plusieurs parties](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Champs :<ul><li>`urls` : tableau de chaînes, une pour chaque URL de partie pré-signée</li><li>`minPartSize` : taille minimale à utiliser pour une partie = url</li><li>`maxPartSize` : taille maximale à utiliser pour une partie = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Informations de chargement d’URL présignées en plusieurs parties pour le rendu généré. Il s’agit d’un chargement [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) avec ce [comportement de chargement en plusieurs parties](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Champs :<ul><li>`urls` : tableau de chaînes, une pour chaque URL de partie pré-signée</li><li>`minPartSize` : taille minimale à utiliser pour une partie = url</li><li>`maxPartSize` : taille maximale à utiliser pour une partie = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Espace réservé facultatif contrôlé par le client et transmis tel quel aux événements de rendu. Permet aux clients d’ajouter des informations personnalisées pour identifier les événements de rendu. Ne doit pas être modifié ni utilisé dans les applications personnalisées, car les clients sont libres de modifier à tout moment ce paramètre. | `{ ... }` |
 
 ### Champs spécifiques au rendu {#rendition-specific-fields}
@@ -435,7 +435,7 @@ Le type Événement [!DNL Adobe I/O] pour tous les événements de l’[!DNL Ass
 | `errorReason` | `string` | `rendition_failed` | La [raison](#error-reasons) de l’échec du rendu, le cas échéant. |
 | `errorMessage` | `string` | `rendition_failed` | Texte donnant, le cas échéant, davantage de détails sur l’échec du rendu. |
 
-### Métadonnées   {#metadata}
+### Métadonnées {#metadata}
 
 | Propriété | Description |
 |--------|-------------|
