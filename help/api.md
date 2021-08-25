@@ -3,9 +3,9 @@ title: API HTTP [!DNL Asset Compute Service]
 description: API HTTP [!DNL Asset Compute Service] pour créer des applications personnalisées.
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 source-git-commit: 780ddb7e119a28a1f8cc555ed2f1d3cee543b73f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2906'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -182,7 +182,7 @@ Les codes d’état sont les suivants :
    }
    ```
 
-* **429 Too many requests** : survient lorsque le système est surchargé. Les clients doivent effectuer un nouvel essai avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
+* **429 Too many requests** : survient lorsque le système est surchargé. Les clients doivent effectuer un nouvel essai avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
 
 * **Error 4xx** : survient lorsqu’une autre erreur client s’est produite et que l’annulation de l’enregistrement a échoué. Généralement, une réponse JSON de ce type est renvoyée, même si ce n’est pas garanti pour toutes les erreurs :
 
@@ -321,7 +321,7 @@ Codes d’état :
 
 * **401 Unauthorized** : lorsque la requête ne dispose pas d’une [authentification](#authentication-and-authorization) valide. Il peut s’agir, par exemple, d’un jeton d’accès ou d’une clé d’API non valide.
 * **403 Forbidden** : lorsque la demande ne dispose pas d’une [autorisation](#authentication-and-authorization) valide. Par exemple, si le jeton d’accès est valide, mais que le projet Adobe Developer Console (compte technique) n’est pas abonné à tous les services requis.
-* **429 Too many requests** : lorsque le système est surchargé de requêtes issues de ce client ou en général. Les clients peuvent effectuer un nouvel essai avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
+* **429 Too many requests** : lorsque le système est surchargé de requêtes issues de ce client ou en général. Les clients peuvent effectuer un nouvel essai avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) (pour diminuer la fréquence du processus). Le corps est vide.
 * **Error 4xx** : en cas d’erreur client, quelle qu’elle soit. Généralement, une réponse JSON de ce type est renvoyée, même si ce n’est pas garanti pour toutes les erreurs :
 
    ```json
@@ -342,7 +342,7 @@ Codes d’état :
    }
    ```
 
-La plupart des clients sont susceptibles de réessayer la même requête avec un [backoff exponentiel](https://en.wikipedia.org/wiki/Exponential_backoff) suite à une erreur, *à l’exception* des problèmes de configuration, comme 401 ou 403, ou des requêtes non valides comme 400. Outre la limitation du débit normal par le biais de réponses 429, une interruption ou une limitation de service temporaire peut entraîner des erreurs 5xx. Il est dans ce cas conseillé de réessayer après un certain temps.
+La plupart des clients sont susceptibles de réessayer la même requête avec un [backoff exponentiel](https://fr.wikipedia.org/wiki/Binary_exponential_backoff) suite à une erreur, *à l’exception* des problèmes de configuration, comme 401 ou 403, ou des requêtes non valides comme 400. Outre la limitation du débit normal par le biais de réponses 429, une interruption ou une limitation de service temporaire peut entraîner des erreurs 5xx. Il est dans ce cas conseillé de réessayer après un certain temps.
 
 Toutes les réponses JSON (le cas échéant) incluent la valeur `requestId`, identique à celle de l’en-tête `X-Request-Id`. Il est recommandé de lire les informations contenues dans l’en-tête, puisqu’il est toujours présent. La valeur `requestId` est également renvoyée dans tous les événements relatifs aux requêtes de traitement sous la forme `requestId`. Les clients ne doivent pas présumer du format de cette chaîne, car il s’agit d’un identifiant de chaîne opaque.
 
@@ -381,7 +381,7 @@ Il s’agit des options disponibles pour le tableau `renditions` dans [/process]
 
 ### Champs spécifiques au rendu {#rendition-specific-fields}
 
-Pour obtenir la liste des formats de fichiers actuellement pris en charge, voir [Formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+Pour obtenir la liste des formats de fichiers actuellement pris en charge, voir [Formats de fichiers pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr).
 
 | Nom | Type | Description | Exemple |
 |-------------------|----------|-------------|---------|
