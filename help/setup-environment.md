@@ -2,10 +2,10 @@
 title: Définition de l’environnement de développement requis pour [!DNL Asset Compute Service]
 description: Configuration de l’environnement de développement  [!DNL Asset Compute Service]  pour commencer à créer et tester le code personnalisé.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 100%
+source-wordcount: '358'
+ht-degree: 85%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 Pour créer une configuration qui permet de développer pour [!DNL Asset Compute Service], suivez ces instructions et exigences.
 
-1. [Obtenez l’accès et les informations d’identification](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials) pour Project Firefly.
+1. [Acquérir l’accès et les ](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) informations d’identification pour  [!DNL Project Firefly].
 
-1. [Configurez l’environnement local](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#local-environment-set-up) et les outils nécessaires.
+1. [Configurez l’environnement local](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) et les outils nécessaires.
 
 1. Voici d’autres outils pour commencer à développer avec aisance :
 
@@ -23,15 +23,15 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
    * [Docker Desktop](https://www.docker.com/get-started).
    * [NodeJS](https://nodejs.org) (LTS v10 à v12, les versions impaires ne sont pas recommandées) et [NPM](https://www.npmjs.com). L’utilisateur d’OSX HomeBrew peut exécuter `brew install node` pour installer l’un et l’autre. Sinon, vous pouvez effectuer le téléchargement sur la [page de téléchargement de NodeJS](https://nodejs.org/fr/).
    * Comme IDE adapté à NodeJS, nous recommandons [Visual Studio Code (VS Code)](https://code.visualstudio.com), car c’est l’IDE pris en charge pour le débogueur. Vous pouvez utiliser un autre IDE à titre d’éditeur de code, mais il n’y a pas encore de prise en charge pour une utilisation avancée (un débogueur, par exemple).
-   * [[!DNL Adobe I/O] Interface en ligne de commande ](https://github.com/adobe/aio-cli) (`aio`) : installation à l’aide de la commande `npm install -g @adobe/aio-cli`.
+   * [[!DNL Adobe I/O] Interface en ligne de commande ](https://github.com/adobe/aio-cli) (`aio`) : installation à l’aide de la commande `npm install -g @adobe/aio-cli@7.1.0`.
 
 1. Veillez à respecter les [conditions préalables](/help/understand-extensibility.md#prerequisites-and-provisioning).
 
 ## Configuration d’un projet Firefly {#create-firefly-project}
 
-1. Accédez au rôle Administrateur système ou Développeur dans l’organisation Expérience. Un administrateur système peut configurer ce rôle dans [Admin Console](https://adminconsole.adobe.com/overview).
+1. Assurez-vous du rôle d’administrateur système ou de développeur dans l’organisation [!DNL Experience Cloud]. Il est configuré par un administrateur système dans le [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Connectez-vous à [Adobe Developer Console](https://console.adobe.io/). Assurez-vous que vous faites partie de la même organisation Adobe Experience Cloud que l’intégration [!DNL Experience Manager] as a [!DNL Cloud Service]. Pour plus d’informations sur Adobe Developer Console, consultez la [documentation de la console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Connectez-vous à [Adobe Developer Console](https://console.adobe.io/). Assurez-vous que vous faites partie de la même organisation [!DNL Experience Cloud] que l’intégration [!DNL Experience Manager] [!DNL Cloud Service]. Pour plus d’informations sur Adobe Developer Console, consultez la [documentation de la console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
 1. [Créez un projet Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Cliquez sur **[!UICONTROL Create new project]** > **[!UICONTROL Project from template]**. Sélectionnez Firefly. Un projet Firefly est créé avec deux espaces de travail : `Production` et `Stage`. Ajoutez des espaces de travail supplémentaires, par exemple `Development`, selon les besoins.
 
@@ -41,11 +41,14 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
 
 Maintenant que votre environnement est configuré, vous êtes prêt à [créer une application personnalisée](develop-custom-application.md).
 
-<!-- TBD items for later:
+<!-- More ideas:
  
 * Any steps in the beginning that lead to gotchas later should be called out for caution? For example,
   * don't change some defaults initially
   * know risks when deviating from standard path
   * naming conventions to follow
   * Retrieve and format credentials (YAML file details)
+
+TBD: When aio-cli v8 bugs are resolved, update the AIO CLI install command to remove v7.x reference and instruct users to use the latest version. See CQDOC-18346.
+
 -->

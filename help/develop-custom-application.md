@@ -2,10 +2,10 @@
 title: Développer pour [!DNL Asset Compute Service]
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 100%
+source-wordcount: '1605'
+ht-degree: 97%
 
 ---
 
@@ -21,11 +21,11 @@ Avant de commencer à développer une application personnalisée :
 
 Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://github.com/adobe/aio-cli) est installée localement.
 
-1. Pour créer une application personnalisée, [créez une application Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
+1. Pour créer une application personnalisée, [créez une application Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
 
-   Si vous n’êtes pas encore connecté, cette commande appelle un navigateur qui vous invite à vous connecter à [Adobe Developer Console](https://console.adobe.io/) avec votre Adobe ID. Voir [ici](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) pour plus d’informations sur la connexion à partir de l’interface de ligne de commande.
+   Si vous n’êtes pas encore connecté, cette commande appelle un navigateur qui vous invite à vous connecter à [Adobe Developer Console](https://console.adobe.io/) avec votre Adobe ID. Voir [ici](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) pour plus d’informations sur la connexion à partir de l’interface de ligne de commande.
 
-   Adobe vous recommande de vous connecter. Si vous rencontrez des problèmes, appliquez les instructions [pour créer une application sans vous connecter](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe vous recommande de vous connecter. Si vous rencontrez des problèmes, appliquez les instructions [pour créer une application sans vous connecter](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Après vous être connecté, suivez les invites de l’interface en ligne de commande et sélectionnez les éléments `Organization`, `Project` et `Workspace` à utiliser pour l’application. Choisissez le projet et l’espace de travail que vous avez créés lors de la [configuration de votre environnement](setup-environment.md).
 
@@ -60,7 +60,7 @@ Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://
 
 1. Suivez les autres invites et ouvrez la nouvelle application dans Visual Studio Code (ou votre éditeur de code préféré). Il contient la structure et l’exemple de code pour une application personnalisée.
 
-   Lisez ici les [principaux composants d’une application Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+   Lisez ici les [principaux composants d’une application Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
    L’application de modèle utilise notre [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) pour le chargement, le téléchargement et l’orchestration des rendus d’application. Les développeurs n’ont donc qu’à implémenter la logique de l’application personnalisée. Dans le dossier `actions/<worker-name>`, le fichier `index.js` indique où ajouter le code d’application personnalisé.
 
@@ -98,7 +98,7 @@ Ajoutez les informations d’identification suivantes pour l’outil de dévelop
 1. Téléchargez le fichier à partir d’Adobe Developer Console. Accédez à la racine du projet et cliquez sur « Tout télécharger » dans l’angle supérieur droit. Le fichier est téléchargé avec `<namespace>-<workspace>.json` comme nom de fichier. Utilisez l’une des méthodes suivantes :
 
    * Renommez le fichier `console.json` et déplacez-le dans la racine de votre projet.
-   * Vous pouvez éventuellement ajouter le chemin d’accès absolu au fichier JSON d’intégration d’Adobe Developer Console. Il s’agit du même fichier [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet.
+   * Vous pouvez éventuellement ajouter le chemin d’accès absolu au fichier JSON d’intégration d’Adobe Developer Console. Il s’agit du même fichier [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) que celui téléchargé dans l’espace de travail du projet.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=

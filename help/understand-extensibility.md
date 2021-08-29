@@ -2,10 +2,10 @@
 title: Comprendre l’extension d’ [!DNL Asset Compute Service]
 description: Quand et comment étendre les fonctionnalités d’ [!DNL Asset Compute Service]  pour effectuer un traitement personnalisé des ressources.
 exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 100%
+source-wordcount: '254'
+ht-degree: 94%
 
 ---
 
@@ -24,9 +24,9 @@ Les applications personnalisées sont des applications [Project Firefly](https:/
 Veillez à respecter les conditions préalables suivantes :
 
 * Les outils Project Firefly sont installés sur votre machine.
-* Une organisation [!DNL Experience Cloud]. Plus d’informations [ici](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
+* Une organisation [!DNL Experience Cloud]. Plus d’informations [ici](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials).
 * [!DNL Experience Manager] as a [!DNL Cloud Service] doit être activé pour l’organisation Experience.
-* L’organisation [!DNL Adobe Experience Cloud] fait partie du programme de préversion pour les développeurs [!DNL Project Firefly]. Voir [Comment demander l’accès](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
+* L’organisation [!DNL Adobe Experience Cloud] fait partie du programme de préversion pour les développeurs [!DNL Project Firefly]. Voir [Comment demander l’accès](https://www.adobe.io/project-firefly/docs/overview/getting_access/).
 * Veillez à ce que le développeur ait un rôle de développeur ou des autorisations d’administrateur au sein de l’organisation.
 * Veillez aussi à ce que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://github.com/adobe/aio-cli) soit installée localement.
 
