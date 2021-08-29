@@ -2,10 +2,10 @@
 title: Définition de l’environnement de développement requis pour [!DNL Asset Compute Service]
 description: Configuration de l’environnement de développement  [!DNL Asset Compute Service]  pour commencer à créer et tester le code personnalisé.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
+source-git-commit: 9404ffcc66a3b6ba206155d1b1a5c16a43e22a39
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 85%
+source-wordcount: '370'
+ht-degree: 82%
 
 ---
 
@@ -26,6 +26,10 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
    * [[!DNL Adobe I/O] Interface en ligne de commande ](https://github.com/adobe/aio-cli) (`aio`) : installation à l’aide de la commande `npm install -g @adobe/aio-cli@7.1.0`.
 
 1. Veillez à respecter les [conditions préalables](/help/understand-extensibility.md#prerequisites-and-provisioning).
+
+>[!NOTE]
+>
+>Pour l’instant, utilisez [!DNL Adobe I/O] CLI v7.1.0 de et n’utilisez pas [!DNL Adobe I/O] CLI v8.
 
 ## Configuration d’un projet Firefly {#create-firefly-project}
 
