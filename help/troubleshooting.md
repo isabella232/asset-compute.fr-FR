@@ -3,9 +3,9 @@ title: Résolution des problèmes liés à [!DNL Asset Compute Service]
 description: Dépanner et déboguer les applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
 source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '285'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -17,10 +17,10 @@ Voici quelques conseils de dépannage génériques qui peuvent vous aider à ré
 * Assurez-vous que toutes les dépendances à installer sont référencées dans le fichier `package.json` de l’application.
 * Assurez-vous que les erreurs pouvant provenir du nettoyage en cas d’échec ne génèrent pas leurs propres erreurs en masquant le problème d’origine.
 
-* Lors du premier démarrage de l’outil de développement avec une nouvelle intégration [!DNL Asset Compute Service], il se peut que la première demande de traitement échoue si le journal des événements d’Asset compute n’est pas complètement configuré. Patientez un certain temps pour que le journal soit configuré avant d’envoyer une autre demande.
+* Lors du démarrage initial de l’outil de développement avec une nouvelle intégration [!DNL Asset Compute Service], il se peut que la première demande de traitement échoue, car le journal des événements Asset Compute n’est pas entièrement configuré. Patientez un certain temps pour que le journal soit configuré avant d’envoyer une autre demande.
 * Si vous rencontrez des erreurs lors de l’envoi de requêtes `/register` ou `/process` Asset Compute, assurez-vous que toutes les API nécessaires sont ajoutées au projet et à l’espace de travail [!DNL Adobe I/O], c’est-à-dire à Asset Compute et à Events [!DNL Adobe I/O], Events Management [!DNL Adobe I/O] et Runtime [!DNL Adobe I/O].
 
-## Problèmes de connexion via l’interface en ligne de commande [!DNL Adobe I/O]  {#login-via-aio-cli}
+## Problèmes de connexion via l’interface en ligne de commande [!DNL Adobe I/O] {#login-via-aio-cli}
 
 Si vous rencontrez des problèmes lors de la connexion à l’[!DNL Adobe Developer Console] [ par le biais de l’interface en ligne de commande  [!DNL Adobe I/O] ](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli), ajoutez manuellement les informations d’identification requises pour le développement, le test et le déploiement de votre application personnalisée :
 
