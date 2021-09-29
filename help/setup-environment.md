@@ -3,9 +3,9 @@ title: Définition de l’environnement de développement requis pour [!DNL Asse
 description: Configuration de l’environnement de développement [!DNL Asset Compute Service] pour commencer à créer et tester le code personnalisé.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 source-git-commit: 9404ffcc66a3b6ba206155d1b1a5c16a43e22a39
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '370'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
 
 >[!NOTE]
 >
->Pour l’instant, utilisez [!DNL Adobe I/O] CLI v7.1.0 de et n’utilisez pas [!DNL Adobe I/O] CLI v8.
+>Pour l’instant, utilisez l’interface de ligne de commande [!DNL Adobe I/O] v7.1.0 et n’utilisez pas l’interface de ligne de commande [!DNL Adobe I/O] v8.
 
 ## Configuration d’un projet Firefly {#create-firefly-project}
 
