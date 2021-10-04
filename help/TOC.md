@@ -7,15 +7,9 @@ role: Developer
 user-guide-title: Guide d’Asset Compute Service
 user-guide-description: Cette documentation concerne les tâches  [!DNL Asset Compute Service]  telles que le développement, la gestion, le déploiement et le dépannage de votre code personnalisé.
 breadcrumb-title: Guide d’Asset Compute Service
-breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: AEM Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html?lang=fr
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
-tutorials-title: Tutoriels AEM
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=fr
-source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
+source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '98'
 ht-degree: 100%
 
 ---
