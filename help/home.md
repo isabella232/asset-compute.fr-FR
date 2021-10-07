@@ -2,9 +2,9 @@
 title: Guide de l’utilisateur d’[!DNL Adobe Asset Compute Service]
 description: Cette documentation concerne les tâches  [!DNL Asset Compute Service] , avec notamment l’introduction, le développement, la gestion, le déploiement et le dépannage de votre code personnalisé.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: daa13e422e16f5832ad3275e310bd98aa34f6c2f
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '221'
 ht-degree: 100%
 
 ---
@@ -17,9 +17,9 @@ Cette documentation concerne des sujets relatifs à [!DNL Asset Compute Service]
 
 [!DNL Asset Compute Service] prend en charge la conversion de multiples formats de fichiers et s’intègre à de nombreux services d’Adobe. Voir la liste des [formats de fichiers et de l’intégration des services pris en charge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr).
 
-Pour obtenir des informations sur les mises à jour et connaître les dernières nouveautés, consultez les [notes de mise à jour](/help/release-notes.md).
-
 Consultez une vue d’ensemble des [fonctionnalités des microservices de ressources disponibles dans  [!DNL Adobe Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr) et comment utiliser les microservices dans [!DNL Experience Manager].
+
+L’extensibilité d’[!DNL Asset Compute Service] est développée dans le cadre d’un modèle de développement ouvert sur [github.com/adobe](https://github.com/adobe) qui accueille les contributions des développeurs d’extensions. Tous les composants pertinents pour le développement, la création, le test et le déploiement d’applications personnalisées sont open source. Voir [Comment et où contribuer à Compute Service](contribute-to-compute-service.md).
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
