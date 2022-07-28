@@ -1,18 +1,18 @@
 ---
 cloud: Experience Cloud
-solution-title: Experience Manager, Experience Manager as a Cloud Service et Experience Manager Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr
+solution-title: Experience Manager, Experience Manager as a Cloud Service, Experience Manager Assets
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
 solution-icon: assets/experience-cloud-logo-24.png
-getting-started-title: Prise en main
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr
-tutorials-title: Tutoriels
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=fr
+getting-started-title: Getting Started
+getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
+tutorials-title: Tutorials
+tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
-git-repo: https://git.corp.adobe.com/AdobeDocs/asset-compute.fr-FR
+git-repo: https://github.com/AdobeDocs/asset-compute.fr-FR
 index: y
 source-git-commit: 5f987f28fdf8d074ceb6226d21a5f64aad67bf04
-workflow-type: ht
-source-wordcount: '162'
+workflow-type: tm+mt
+source-wordcount: '130'
 ht-degree: 100%
 
 ---
