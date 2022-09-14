@@ -2,10 +2,10 @@
 title: Comprendre le fonctionnement d’une application personnalisée
 description: Fonctionnement interne d’une application personnalisée  [!DNL Asset Compute Service]  pour faciliter votre compréhension.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 100%
+source-wordcount: '752'
+ht-degree: 97%
 
 ---
 
@@ -68,7 +68,7 @@ Vous trouverez ci-dessous un exemple de requête de traitement d’application p
 }
 ```
 
-L’[!DNL Asset Compute Service] envoie les requêtes de rendu d’application personnalisée à l’application personnalisée. Il utilise une requête HTTP POST sur l’URL de l’application fournie. Il s’agit de l’URL d’action web sécurisée de Project Firefly. Toutes les requêtes utilisent le protocole HTTPS pour maximiser la sécurité des données.
+L’[!DNL Asset Compute Service] envoie les requêtes de rendu d’application personnalisée à l’application personnalisée. Il utilise un POST HTTP pour l’URL de l’application fournie, qui est l’URL d’action web sécurisée de Project App Builder. Toutes les requêtes utilisent le protocole HTTPS pour maximiser la sécurité des données.
 
 Le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilisé par une application personnalisée traite la requête HTTP POST. Il gère également le téléchargement de la source, le chargement de rendus, l’envoi d’événements [!DNL Adobe I/O] et la gestion des erreurs.
 
@@ -118,7 +118,7 @@ Une fois chaque rendu créé et stocké dans un fichier avec le chemin d’accè
 
 Le SDK envoie des événements [!DNL Adobe I/O] pour chaque rendu. Ces événements sont de type `rendition_created` ou `rendition_failed`, selon le résultat. Pour plus d’informations sur les événements, voir [Événements asynchrones Asset Compute](api.md#asynchronous-events).
 
-## Recevoir des Événements [!DNL Adobe I/O] {#receive-aio-events}
+## Recevoir des Événements [!DNL Adobe I/O]  {#receive-aio-events}
 
 Le client interroge le journal des événements [[!DNL Adobe I/O] ](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) en fonction de sa logique de consommation. L’URL de journal initiale est celle fournie dans la réponse de l’API `/register`. Il est possible d’identifier les événements à l’aide du paramètre `requestId`, présent dans les événements. C’est le même que celui renvoyé dans `/process`. Chaque rendu comporte un événement distinct, envoyé dès que le rendu a été chargé (ou a échoué). Une fois qu’il reçoit un événement correspondant, le client peut afficher ou gérer les rendus résultants.
 
