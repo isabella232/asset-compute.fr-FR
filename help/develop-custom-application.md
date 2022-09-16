@@ -2,10 +2,10 @@
 title: Développer pour [!DNL Asset Compute Service]
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 92%
+ht-degree: 89%
 
 ---
 
@@ -21,11 +21,11 @@ Avant de commencer à développer une application personnalisée :
 
 Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://github.com/adobe/aio-cli) est installée localement.
 
-1. Pour créer une application personnalisée, procédez comme suit : [création d’un projet App Builder](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
+1. Pour créer une application personnalisée, procédez comme suit : [création d’un projet App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
 
-   Si vous n’êtes pas encore connecté, cette commande appelle un navigateur qui vous invite à vous connecter à [Adobe Developer Console](https://console.adobe.io/) avec votre Adobe ID. Voir [ici](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) pour plus d’informations sur la connexion à partir de l’interface de ligne de commande.
+   Si vous n’êtes pas encore connecté, cette commande appelle un navigateur qui vous invite à vous connecter à [Adobe Developer Console](https://console.adobe.io/) avec votre Adobe ID. Voir [ici](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) pour plus d’informations sur la connexion à partir de l’interface de ligne de commande.
 
-   Adobe vous recommande de vous connecter. Si vous rencontrez des problèmes, appliquez les instructions [pour créer une application sans vous connecter](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe vous recommande de vous connecter. Si vous rencontrez des problèmes, appliquez les instructions [pour créer une application sans vous connecter](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Après vous être connecté, suivez les invites de l’interface en ligne de commande et sélectionnez les éléments `Organization`, `Project` et `Workspace` à utiliser pour l’application. Choisissez le projet et l’espace de travail que vous avez créés lors de la [configuration de votre environnement](setup-environment.md). À l’invite `Which extension point(s) do you wish to implement ?`, veillez à sélectionner `DX Asset Compute Worker` :
 
@@ -62,7 +62,7 @@ Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://
 
 1. Suivez les autres invites et ouvrez la nouvelle application dans Visual Studio Code (ou votre éditeur de code préféré). Il contient la structure et l’exemple de code pour une application personnalisée.
 
-   Lisez ici à propos de [composants principaux d’une application App Builder](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+   Lisez ici à propos de [composants principaux d’une application App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    L’application de modèle utilise notre [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) pour le chargement, le téléchargement et l’orchestration des rendus d’application. Les développeurs n’ont donc qu’à implémenter la logique de l’application personnalisée. Dans le dossier `actions/<worker-name>`, le fichier `index.js` indique où ajouter le code d’application personnalisé.
 
