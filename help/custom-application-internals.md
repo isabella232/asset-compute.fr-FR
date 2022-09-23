@@ -17,7 +17,7 @@ Utilisez l’illustration suivante pour comprendre le workflow de bout en bout l
 
 *Figure : Procédure de traitement d’une ressource à l’aide d’[!DNL Asset Compute Service].*
 
-## L’enregistrement {#registration}
+## Enregistrement {#registration}
 
 Le client doit appeler une fois [`/register`](api.md#register) avant la première requête à [`/process`](api.md#process-request) pour configurer et récupérer l’URL du journal afin de recevoir les événements [!DNL Adobe I/O] pour Adobe Asset Compute.
 
@@ -114,11 +114,11 @@ Une fois chaque rendu créé et stocké dans un fichier avec le chemin d’accè
 
 `batchWorker()` a un comportement différent, car il traite tous les rendus, et ne les charge qu’après les avoir tous traités.
 
-## [!DNL Adobe I/O] Événements {#aio-events}
+## Événements [!DNL Adobe I/O] {#aio-events}
 
 Le SDK envoie des événements [!DNL Adobe I/O] pour chaque rendu. Ces événements sont de type `rendition_created` ou `rendition_failed`, selon le résultat. Pour plus d’informations sur les événements, voir [Événements asynchrones Asset Compute](api.md#asynchronous-events).
 
-## Recevoir des Événements [!DNL Adobe I/O]  {#receive-aio-events}
+## Recevoir des événements [!DNL Adobe I/O]  {#receive-aio-events}
 
 Le client interroge le journal des événements [[!DNL Adobe I/O] ](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) en fonction de sa logique de consommation. L’URL de journal initiale est celle fournie dans la réponse de l’API `/register`. Il est possible d’identifier les événements à l’aide du paramètre `requestId`, présent dans les événements. C’est le même que celui renvoyé dans `/process`. Chaque rendu comporte un événement distinct, envoyé dès que le rendu a été chargé (ou a échoué). Une fois qu’il reçoit un événement correspondant, le client peut afficher ou gérer les rendus résultants.
 

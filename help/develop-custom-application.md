@@ -5,7 +5,7 @@ exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 89%
+ht-degree: 97%
 
 ---
 
@@ -19,9 +19,9 @@ Avant de commencer à développer une application personnalisée :
 
 ## Création d’une application personnalisée {#create-custom-application}
 
-Assurez-vous que l’interface en ligne de commande [[!DNL Adobe I/O] ](https://github.com/adobe/aio-cli) est installée localement.
+Assurez-vous que l’[[!DNL Adobe I/O] interface en ligne de commande](https://github.com/adobe/aio-cli) est installée localement.
 
-1. Pour créer une application personnalisée, procédez comme suit : [création d’un projet App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
+1. Pour créer une application personnalisée, [créez un projet App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Pour ce faire, exécutez `aio app init <app-name>` sur votre terminal.
 
    Si vous n’êtes pas encore connecté, cette commande appelle un navigateur qui vous invite à vous connecter à [Adobe Developer Console](https://console.adobe.io/) avec votre Adobe ID. Voir [ici](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) pour plus d’informations sur la connexion à partir de l’interface de ligne de commande.
 
@@ -70,7 +70,7 @@ Voir [Exemples d’applications personnalisées](#try-sample) pour consulter des
 
 ### Ajout des informations d’identification {#add-credentials}
 
-Lorsque vous vous connectez lors de la création de l’application, la plupart des informations d’identification du générateur d’applications sont collectées dans votre fichier ENV. Toutefois, l’utilisation de l’outil de développement nécessite des informations d’identification supplémentaires.
+Lorsque vous vous connectez tandis que l’application est en train de se créer, la plupart des informations d’identification d’App Builder sont collectées dans votre fichier ENV. Toutefois, l’utilisation de l’outil de développement nécessite des informations d’identification supplémentaires.
 
 <!-- TBD: Check if manual setup of credentials is required.
 Manual set up of credentials is removed from troubleshooting and best practices page. Link was broken.
@@ -89,9 +89,9 @@ Assurez-vous d’avoir accès à un [conteneur de stockage dans le cloud pris en
 
 #### Ajout des informations d’identification au fichier ENV {#add-credentials-env-file}
 
-Ajoutez les informations d’identification suivantes pour l’outil de développement au fichier ENV dans la racine de votre projet App Builder :
+Ajoutez les informations d’identification suivantes pour l’outil de développement dans le fichier ENV dans la racine de votre projet App Builder :
 
-1. Ajoutez le chemin d’accès absolu au fichier de clé privée créé lors de l’ajout de services à votre projet App Builder :
+1. Ajoutez le chemin d’accès absolu au fichier de clé privée créé lors de l’ajout de services à votre projet App Builder :
 
    ```conf
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
@@ -222,7 +222,7 @@ exports.main = worker(async function (source, rendition) {
 
 ## Prise en charge de l’authentification et de l’autorisation {#authentication-authorization-support}
 
-Par défaut, les applications personnalisées d’Asset compute sont fournies avec des contrôles d’autorisation et d’authentification pour le projet App Builder. Cette fonction est activée en définissant l’annotation `require-adobe-auth` sur `true` dans `manifest.yml`.
+Par défaut, les applications personnalisées Asset Compute sont fournies avec des contrôles d’autorisation et d’authentification pour le projet App Builder. Cette fonction est activée en définissant l’annotation `require-adobe-auth` sur `true` dans `manifest.yml`.
 
 ### Accès à d’autres API d’Adobe {#access-adobe-apis}
 
@@ -294,6 +294,6 @@ Les applications Asset Compute tendent par nature à être liées aux entrées e
 
 La mémoire disponible pour un conteneur d’action est spécifiée par le paramètre `memorySize` en Mo. Actuellement, il définit également le niveau d’accès du conteneur à l’unité centrale. Il s’agit surtout d’un élément clé du coût d’utilisation du Runtime (les conteneurs plus volumineux coûtent plus cher). Utilisez ici une valeur plus élevée lorsque votre traitement nécessite davantage de mémoire ou d’unité centrale. Veillez toutefois à ne pas gaspiller les ressources, car plus les conteneurs sont volumineux, plus le débit global est faible.
 
-En outre, il est possible de contrôler la simultanéité des actions dans un conteneur à l’aide du paramètre `concurrency`. Il s’agit du nombre d’activations simultanées obtenues par un seul conteneur (de la même action). Dans ce modèle, le conteneur d’action est semblable à un serveur Node.js recevant plusieurs requêtes simultanées, jusqu’à cette limite. Si elle n’est pas définie, la valeur par défaut dans Runtime est de 200, ce qui est idéal pour les actions de créateur d’applications plus petites, mais généralement trop élevé pour les applications d’Asset compute, compte tenu de leur activité de disque et de traitement local plus intensifs. Selon leur mise en œuvre, il est possible que certaines applications ne fonctionnent pas correctement avec les activités simultanées. Le SDK Asset Compute garantit que les activations sont séparées en écrivant des fichiers dans différents dossiers uniques.
+En outre, il est possible de contrôler la simultanéité des actions dans un conteneur à l’aide du paramètre `concurrency`. Il s’agit du nombre d’activations simultanées obtenues par un seul conteneur (de la même action). Dans ce modèle, le conteneur d’action est semblable à un serveur Node.js recevant plusieurs requêtes simultanées, jusqu’à cette limite. Si elle n’est pas définie, la valeur par défaut dans le Runtime est de 200, ce qui est idéal pour les actions App Builder plus modestes, mais généralement trop élevé pour les applications Asset Compute, compte tenu de l’intensité accrue des activités de disque et des traitements locaux. Selon leur mise en œuvre, il est possible que certaines applications ne fonctionnent pas correctement avec les activités simultanées. Le SDK Asset Compute garantit que les activations sont séparées en écrivant des fichiers dans différents dossiers uniques.
 
 Testez les applications pour trouver les valeurs optimales de `concurrency` et `memorySize`. Des conteneurs plus volumineux reviennent à une limite de mémoire plus haute, ce qui permet une plus grande simultanéité, mais peut aussi entraîner du gaspillage si le trafic est plus faible.

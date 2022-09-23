@@ -5,7 +5,7 @@ exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
 source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 77%
+ht-degree: 94%
 
 ---
 
@@ -22,8 +22,8 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
    * [Git](https://git-scm.com/)
    * [Docker Desktop](https://www.docker.com/get-started)
    * [NodeJS](https://nodejs.org) (LTS v14, les versions impaires ne sont pas recommandées) et [NPM](https://www.npmjs.com). L’utilisateur d’OSX HomeBrew peut exécuter `brew install node` pour installer l’un et l’autre. Sinon, vous pouvez effectuer le téléchargement sur la [page de téléchargement de NodeJS](https://nodejs.org/fr/)
-   * Comme IDE adapté à NodeJS, nous recommandons [Visual Studio Code (VS Code)](https://code.visualstudio.com), car c’est l’IDE pris en charge pour le débogueur. Vous pouvez utiliser n’importe quel autre IDE en tant qu’éditeur de code, mais l’utilisation avancée (par exemple, le débogueur) n’est pas encore prise en charge.
-   * Installez la dernière[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
+   * Comme IDE adapté à NodeJS, nous recommandons [Visual Studio Code (VS Code)](https://code.visualstudio.com), car c’est l’IDE pris en charge pour le débogueur. Vous pouvez utiliser un autre IDE à titre d’éditeur de code, mais il n’y a pas encore de prise en charge pour une utilisation avancée (un débogueur, par exemple).
+   * Installer la dernière [[!DNL Adobe I/O] ligne de commande](https://github.com/adobe/aio-cli) (`aio`)
 
    <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
@@ -35,15 +35,15 @@ Pour créer une configuration qui permet de développer pour [!DNL Asset Compute
 >For now, use [!DNL Adobe I/O] CLI v7.1.0 of and do not use [!DNL Adobe I/O] CLI v8.
 -->
 
-## Configuration d’un projet App Builder {#create-App-Builder-project}
+## Configurer un projet App Builder {#create-App-Builder-project}
 
 1. Assurez-vous du rôle d’administrateur système ou de développeur dans l’organisation [!DNL Experience Cloud]. Un administrateur système peut configurer ce rôle dans [Admin Console](https://adminconsole.adobe.com/overview).
 
 1. Connectez-vous à [Adobe Developer Console](https://console.adobe.io/). Assurez-vous que vous faites partie de la même organisation [!DNL Experience Cloud] que l’intégration [!DNL Experience Manager] as a [!DNL Cloud Service]. Pour plus d’informations sur Adobe Developer Console, consultez la [documentation de la console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
-1. [Création d’un projet App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Cliquez sur **[!UICONTROL Create new project]** > **[!UICONTROL Project from template]**. Sélectionnez App Builder. Il crée un projet App Builder avec deux espaces de travail : `Production` et `Stage`. Ajoutez des espaces de travail supplémentaires, par exemple `Development`, selon les besoins.
+1. [Créer un projet App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Cliquez sur **[!UICONTROL Créer un projet]** > **[!UICONTROL Projet à partir d’un modèle]**. Sélectionnez App Builder. Un projet App Builder est créé avec deux espaces de travail : `Production` et `Stage`. Ajoutez des espaces de travail supplémentaires, par exemple `Development`, selon les besoins.
 
-1. Dans le projet App Builder, sélectionnez un espace de travail et abonnez-vous aux services requis pour l’Asset compute. Cliquez sur **Add to Project** > **API** et ajoutez les services `Asset Compute`, `IO Events` et `IO Events Management`. Lors de l’ajout de la première API, une invite propose de créer une clé privée. Enregistrez ces informations sur votre ordinateur, car vous en aurez besoin pour tester votre application personnalisée à l’aide de l’outil de développement.
+1. Dans le projet App Builder, sélectionnez un espace de travail et abonnez-vous aux services requis pour Asset Compute. Cliquez sur **Add to Project** > **API** et ajoutez les services `Asset Compute`, `IO Events` et `IO Events Management`. Lors de l’ajout de la première API, une invite propose de créer une clé privée. Enregistrez ces informations sur votre ordinateur, car vous en aurez besoin pour tester votre application personnalisée à l’aide de l’outil de développement.
 
 ## Étape suivante {#next-step}
 
