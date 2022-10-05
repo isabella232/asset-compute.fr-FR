@@ -3,9 +3,9 @@ title: Développer pour [!DNL Asset Compute Service]
 description: Créer des applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
 source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1618'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ Assurez-vous que l’[[!DNL Adobe I/O] interface en ligne de commande](https://g
 
 1. Suivez les autres invites et ouvrez la nouvelle application dans Visual Studio Code (ou votre éditeur de code préféré). Il contient la structure et l’exemple de code pour une application personnalisée.
 
-   Lisez ici à propos de [composants principaux d’une application App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
+   Lisez ici des informations sur les [principaux composants d’une application App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    L’application de modèle utilise notre [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) pour le chargement, le téléchargement et l’orchestration des rendus d’application. Les développeurs n’ont donc qu’à implémenter la logique de l’application personnalisée. Dans le dossier `actions/<worker-name>`, le fichier `index.js` indique où ajouter le code d’application personnalisé.
 
@@ -195,7 +195,7 @@ Par exemple, [`worker-animal-pictures`](https://github.com/adobe/asset-compute-e
 
 ### Transmission de paramètres personnalisés {#pass-custom-parameters}
 
-Vous pouvez transmettre des paramètres personnalisés définis à l’aide des objets de rendu. Ils peuvent être référencés dans l’application au moyen d’[`rendition`instructions](https://github.com/adobe/asset-compute-sdk#rendition). Voici un exemple d’objet de rendu :
+Vous pouvez transmettre des paramètres personnalisés définis à l’aide des objets de rendu. Ils peuvent être référencés dans l’application au moyen de [`rendition` instructions](https://github.com/adobe/asset-compute-sdk#rendition). Voici un exemple d’objet de rendu :
 
 ```json
 "renditions": [
