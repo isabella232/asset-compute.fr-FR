@@ -3,9 +3,9 @@ title: Comprendre le fonctionnement d’une application personnalisée
 description: Fonctionnement interne d’une application personnalisée  [!DNL Asset Compute Service]  pour faciliter votre compréhension.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
 source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '751'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -68,7 +68,7 @@ Vous trouverez ci-dessous un exemple de requête de traitement d’application p
 }
 ```
 
-L’[!DNL Asset Compute Service] envoie les requêtes de rendu d’application personnalisée à l’application personnalisée. Il utilise un POST HTTP pour l’URL de l’application fournie, qui est l’URL d’action Web sécurisée à partir du générateur d’applications. Toutes les requêtes utilisent le protocole HTTPS pour maximiser la sécurité des données.
+L’[!DNL Asset Compute Service] envoie les requêtes de rendu d’application personnalisée à l’application personnalisée. Il utilise une requête HTTP POST sur l’URL de l’application fournie. Il s’agit de l’URL d’action web sécurisée d’App Builder. Toutes les requêtes utilisent le protocole HTTPS pour maximiser la sécurité des données.
 
 Le [SDK Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilisé par une application personnalisée traite la requête HTTP POST. Il gère également le téléchargement de la source, le chargement de rendus, l’envoi d’événements [!DNL Adobe I/O] et la gestion des erreurs.
 
