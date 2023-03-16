@@ -2,10 +2,10 @@
 title: Contribuez aux composants open source d’ [!DNL Asset Compute Service]
 description: Contribuez aux composants open source d’ [!DNL Asset Compute Service].
 exl-id: 99a4b4d9-4709-4f8e-9f8c-96ba1783c4c3
-source-git-commit: 187a788d036f33b361a0fd1ca34a854daeb4a101
+source-git-commit: 50f69e16772cee7f79a812f2b86f0ef0221db369
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 100%
+source-wordcount: '205'
+ht-degree: 96%
 
 ---
 
@@ -24,11 +24,11 @@ Pour plus de détails, consultez les [Directives concernant les contributions](h
 Consultez cette liste de [bibliothèques open source](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) pour [!DNL Asset Compute Service]. En outre, les ressources Runtime et OpenWhisk [!DNL Adobe I/O] suivantes sont à votre disposition :
 
 * [Prise en main d’Apache OpenWhisk](https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [Atelier : créez une IA modulable avec Runtime  [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] ](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* [Lab : Création d’une IA composable avec [!DNL Adobe Sensei] fonctions et [!DNL Adobe I/O] Exécution](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
 * FAQ Runtime [[!DNL Adobe I/O] ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
-* Link to Firefly open-source components.
-* Issues in `aio` can be reported in Firefly repos.
+* Link to Adobe Developer App Builder open-source components.
+* Issues in `aio` can be reported in Adobe Developer App Builder repos.
 * Issues in asset-compute-sdk or devtool goes into the relevant repos from Nui.
 -->

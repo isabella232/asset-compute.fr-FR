@@ -2,20 +2,20 @@
 title: Architecture d’ [!DNL Asset Compute Service]
 description: Comment l’API, les applications et le SDK [!DNL Asset Compute Service] fonctionnent ensemble pour fournir un service de traitement des ressources natif dans le cloud.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
-workflow-type: ht
-source-wordcount: '485'
-ht-degree: 100%
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 98%
 
 ---
 
 # Architecture de [!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] repose sur la plate-forme Runtime [!DNL Adobe I/O] sans serveur. Il permet la prise en charge des ressources par les services de contenu Adobe Sensei. Le client appelant (uniquement si [!DNL Experience Manager] as a [!DNL Cloud Service] est pris en charge) reçoit les informations générées par Adobe Sensei qu’il a recherchées pour la ressource. Les informations renvoyées sont au format JSON.
+[!DNL Asset Compute Service] repose sur la plateforme Runtime [!DNL Adobe I/O] sans serveur. Il permet la prise en charge des ressources par les services de contenu Adobe Sensei. Le client appelant (uniquement si [!DNL Experience Manager] as a [!DNL Cloud Service] est pris en charge) reçoit les informations générées par Adobe Sensei qu’il a recherchées pour la ressource. Les informations renvoyées sont au format JSON.
 
-[!DNL Asset Compute Service] est extensible en créant des applications personnalisées basées sur [!DNL Project Firefly]. Ces applications personnalisées sont des applications [!DNL Project Firefly] sans interface utilisateur graphique. Elles effectuent des tâches comme l’ajout d’outils de conversion personnalisés ou l’appel d’API externes pour réaliser des opérations sur des images.
+[!DNL Asset Compute Service] est extensible en créant des applications personnalisées basées sur [!DNL Project Adobe Developer App Builder]. Ces applications personnalisées sont des applications [!DNL Project Adobe Developer App Builder] sans interface utilisateur graphique. Elles effectuent des tâches comme l’ajout d’outils de conversion personnalisés ou l’appel d’API externes pour réaliser des opérations sur des images.
 
-[!DNL Project Firefly] est un framework destiné à créer et déployer des applications web personnalisées sur [!DNL Adobe I/O] Runtime. Pour créer des applications personnalisées, les développeurs peuvent tirer parti de [!DNL React Spectrum] (boîte à outils d’interface utilisateur d’Adobe), créer des microservices et des événements personnalisés, et orchestrer les API. Voir la [documentation de Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Project Adobe Developer App Builder] est un framework destiné à créer et déployer des applications web personnalisées sur [!DNL Adobe I/O] Runtime. Pour créer des applications personnalisées, les développeurs peuvent tirer parti de [!DNL React Spectrum] (boîte à outils d’interface utilisateur d’Adobe), créer des microservices et des événements personnalisés, et orchestrer les API. Voir [documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
 
 Les fondements de l’architecture sont les suivants :
 
@@ -40,7 +40,7 @@ L’architecture se compose des parties suivantes :
 <!-- TBD:
 
 * About the YAML file?
-* See [https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+* See [https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
 * minimize description to custom applications
 * remove all internal stuff (e.g. Photoshop application, API Gateway) from text and diagram

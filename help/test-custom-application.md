@@ -2,10 +2,10 @@
 title: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée
 description: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 100%
+source-wordcount: '812'
+ht-degree: 93%
 
 ---
 
@@ -66,7 +66,7 @@ Consultez les [exemples d’applications personnalisées](https://github.com/ado
 
 ### Test de la sortie {#test-output}
 
-Les résultats de test détaillés, y compris les journaux de l’application personnalisée, sont disponibles dans le dossier `build` situé à la racine de l’application Firefly, comme le montre la sortie `aio app test`.
+Les résultats de test détaillés, y compris les journaux de l’application personnalisée, sont disponibles dans le `build` à la racine de l’application Adobe Developer App Builder, comme illustré dans la section `aio app test` sortie.
 
 ### Simulation des services externes {#mock-external-services}
 
@@ -164,7 +164,7 @@ Voir la liste complète et la description des [raisons des erreurs d’Asset Com
 
 Les étapes ci-dessous montrent comment déboguer votre application personnalisée à l’aide de Visual Studio Code. Il permet d’afficher les journaux en direct, d’atteindre des points d’arrêt, de parcourir le code, mais aussi de charger à nouveau en direct des modifications du code local à chaque activation.
 
-La plupart de ces étapes sont généralement automatisées d’usine par `aio` ; voir la section Débogage de l’application dans la [documentation de Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Pour le moment, les étapes ci-dessous comportent une solution de contournement.
+La plupart de ces étapes sont généralement automatisées par `aio` Reportez-vous à la section Débogage de l’application dans la section [Documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app). Pour le moment, les étapes ci-dessous comportent une solution de contournement.
 
 1. Installez la dernière version de [wskdebug](https://github.com/apache/openwhisk-wskdebug) depuis GitHub et, facultativement, [ngrok](https://www.npmjs.com/package/ngrok).
 

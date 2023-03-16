@@ -2,10 +2,10 @@
 title: Résolution des problèmes liés à [!DNL Asset Compute Service]
 description: Dépanner et déboguer les applications personnalisées à l’aide d’ [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
-workflow-type: ht
-source-wordcount: '285'
-ht-degree: 100%
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 88%
 
 ---
 
@@ -22,11 +22,11 @@ Voici quelques conseils de dépannage génériques qui peuvent vous aider à ré
 
 ## Problèmes de connexion via l’interface en ligne de commande [!DNL Adobe I/O] {#login-via-aio-cli}
 
-Si vous rencontrez des problèmes lors de la connexion à l’[!DNL Adobe Developer Console] [ par le biais de l’interface en ligne de commande  [!DNL Adobe I/O] ](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli), ajoutez manuellement les informations d’identification requises pour le développement, le test et le déploiement de votre application personnalisée :
+Si vous rencontrez des problèmes lors de la connexion à l’[!DNL Adobe Developer Console] [ par le biais de l’interface en ligne de commande  [!DNL Adobe I/O] ](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli), ajoutez manuellement les informations d’identification requises pour le développement, le test et le déploiement de votre application personnalisée :
 
-1. Accédez à votre projet et à votre espace de travail Firefly sur [Adobe Developer Console](https://console.adobe.io/), puis appuyez sur **[!UICONTROL Download]** dans le coin supérieur droit. Ouvrez ce fichier JSON et enregistrez-le à un emplacement sécurisé sur votre ordinateur.
+1. Accédez à votre projet et à votre espace de travail Adobe Developer App Builder dans le [Console Adobe Developer](https://console.adobe.io/) et presse **[!UICONTROL Télécharger]** dans le coin supérieur droit. Ouvrez ce fichier JSON et enregistrez-le à un emplacement sécurisé sur votre ordinateur.
 
-1. Accédez au fichier ENV de votre application Firefly.
+1. Accédez au fichier ENV dans votre application Adobe Developer App Builder.
 
 1. Ajoutez les informations d’identification de Runtime [!DNL Adobe I/O]. Récupérez les informations d’identification Runtime [!DNL Adobe I/O] à partir du fichier JSON téléchargé. Les informations d’identification se trouvent dans `project.workspace.services.runtime`. Ajoutez les informations d’identification Runtime [!DNL Adobe I/O] dans les variables `AIO_runtime_XXX` :
 
