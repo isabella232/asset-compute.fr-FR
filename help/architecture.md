@@ -2,7 +2,7 @@
 title: Architecture d’ [!DNL Asset Compute Service]
 description: Comment l’API, les applications et le SDK [!DNL Asset Compute Service] fonctionnent ensemble pour fournir un service de traitement des ressources natif dans le cloud.
 exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
-source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
+source-git-commit: 0c5ab8ab230e3f033b804849a2c005351542155f
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 98%
@@ -40,8 +40,6 @@ L’architecture se compose des parties suivantes :
 <!-- TBD:
 
 * About the YAML file?
-* See [https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
-
 * minimize description to custom applications
 * remove all internal stuff (e.g. Photoshop application, API Gateway) from text and diagram
 * update diagram to focus on 3rd party custom applications ONLY
