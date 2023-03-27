@@ -3,7 +3,7 @@ title: Comprendre le fonctionnement d’une application personnalisée
 description: Fonctionnement interne d’une application personnalisée  [!DNL Asset Compute Service]  pour faciliter votre compréhension.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
 source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '751'
 ht-degree: 100%
 
