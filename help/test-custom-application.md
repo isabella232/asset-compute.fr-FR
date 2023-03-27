@@ -3,15 +3,15 @@ title: Test et débogage d’une application [!DNL Asset Compute Service] person
 description: Test et débogage d’une application [!DNL Asset Compute Service] personnalisée.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '812'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# Test et débogage d’une application personnalisée {#test-debug-custom-worker}
+# Tester et déboguer une application personnalisée {#test-debug-custom-worker}
 
-## Exécution de tests unitaires pour une application personnalisée {#test-custom-worker}
+## Exécuter des tests unitaires pour une application personnalisée {#test-custom-worker}
 
 Installez [Docker Desktop](https://www.docker.com/get-started) sur votre ordinateur. Pour tester un programme de travail personnalisé, exécutez la commande suivante à la racine de l’application :
 
@@ -33,7 +33,7 @@ Le plug-in [aio-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugi
 
 Le framework de test unitaire d’application Asset Compute permet de tester les applications sans écrire de code. Il repose sur le principe d’un fichier entre la source et le rendu pour les applications. Il est nécessaire de configurer une certaine structure de fichiers et de dossiers pour définir des cas de test avec des fichiers source de test, des paramètres facultatifs, des rendus attendus et des scripts de validation personnalisés. Par défaut, les rendus sont comparés pour l’égalité des octets. En outre, il est facile de simuler les services HTTP externes à l’aide de fichiers JSON simples.
 
-### Ajout de tests {#add-tests}
+### Ajouter des tests {#add-tests}
 
 Les tests doivent être placés dans le dossier `test` au niveau racine du projet [!DNL Adobe I/O]. Les cas de test pour chaque application doivent se trouver dans le chemin d’accès `test/asset-compute/<worker-name>`, avec un dossier pour chaque cas :
 
@@ -64,11 +64,11 @@ test/
 
 Consultez les [exemples d’applications personnalisées](https://github.com/adobe/asset-compute-example-workers/) pour en savoir plus. Vous trouverez ci-dessous une référence détaillée.
 
-### Test de la sortie {#test-output}
+### Tester la sortie {#test-output}
 
-Les résultats de test détaillés, y compris les journaux de l’application personnalisée, sont disponibles dans le `build` à la racine de l’application Adobe Developer App Builder, comme illustré dans la section `aio app test` sortie.
+Les résultats de test détaillés, y compris les journaux de l’application personnalisée, sont disponibles dans le dossier `build` situé à la racine de l’application Adobe Developer App Builder, comme le montre la sortie `aio app test`.
 
-### Simulation des services externes {#mock-external-services}
+### Simuler des services externes {#mock-external-services}
 
 Il est possible de simuler des appels de service externes dans vos actions en définissant des fichiers `mock-<HOST_NAME>.json` dans vos cas de test, HOST_NAME étant l’hôte que vous souhaitez simuler. Un exemple d’utilisation est une application qui effectue un appel distinct à S3. La nouvelle structure de test pourrait ressembler à ceci :
 
@@ -103,7 +103,7 @@ Le fichier de simulation est une réponse http au format JSON. Pour plus d’inf
 
 L’exemple `worker-animal-pictures` contient un [fichier de simulation](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) pour le service Wikimedia avec lequel il interagit.
 
-#### Partage de fichiers pour les cas de test {#share-files-across-test-cases}
+#### Partager des fichiers pour les cas de test {#share-files-across-test-cases}
 
 Il est recommandé d’utiliser des liens symboliques relatifs si vous partagez des scripts `file.*`, `params.json` ou `validate` pour différents tests. Ils sont pris en charge avec git. Veillez à attribuer un nom unique à vos fichiers partagés, car vous pouvez en avoir plusieurs. Dans l’exemple ci-dessous, les tests combinent quelques fichiers partagés, et les leurs :
 
@@ -133,7 +133,7 @@ tests/
         validate
 ```
 
-### Test des erreurs attendues {#test-unexpected-errors}
+### Tester les erreurs attendues {#test-unexpected-errors}
 
 Les cas de tests d’erreur ne doivent pas contenir de fichier `rendition.*` attendu et ont à définir la valeur `errorReason` attendue dans le fichier `params.json`.
 
@@ -160,11 +160,11 @@ Fichier de paramètres avec la raison de l’erreur :
 
 Voir la liste complète et la description des [raisons des erreurs d’Asset Compute](https://github.com/adobe/asset-compute-commons#error-reasons).
 
-## Débogage d’une application personnalisée {#debug-custom-worker}
+## Déboguer une application personnalisée {#debug-custom-worker}
 
 Les étapes ci-dessous montrent comment déboguer votre application personnalisée à l’aide de Visual Studio Code. Il permet d’afficher les journaux en direct, d’atteindre des points d’arrêt, de parcourir le code, mais aussi de charger à nouveau en direct des modifications du code local à chaque activation.
 
-La plupart de ces étapes sont généralement automatisées par `aio` Reportez-vous à la section Débogage de l’application dans la section [Documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app). Pour le moment, les étapes ci-dessous comportent une solution de contournement.
+La plupart de ces étapes sont généralement automatisées par `aio` prêt à l’emploi. Consultez la section Déboguer l’application dans la [documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app). Pour le moment, les étapes ci-dessous comportent une solution de contournement.
 
 1. Installez la dernière version de [wskdebug](https://github.com/apache/openwhisk-wskdebug) depuis GitHub et, facultativement, [ngrok](https://www.npmjs.com/package/ngrok).
 
