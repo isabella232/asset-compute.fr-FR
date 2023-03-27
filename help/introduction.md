@@ -3,9 +3,9 @@ title: Introduction à [!DNL Asset Compute Service]
 description: « [!DNL Asset Compute Service] est un service de traitement des ressources natif dans le cloud destiné à réduire la complexité et à améliorer l’évolutivité. »
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
 source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 95%
 
 Les développeurs peuvent ainsi ajouter des applications de ressources personnalisées (également appelées programmes de travail personnalisés) pour traiter les cas d’utilisation spécifiques. Le service fonctionne sur [!DNL Adobe I/O] Runtime. Il peut être étendu à l’aide d’applications [!DNL Adobe Developer App Builder] sans interface utilisateur graphique écrites dans Node.js. Il peut s’agir d’opérations personnalisées telles que des appels à des API externes pour effectuer des opérations sur des images ou pour bénéficier de la prise en charge d’[!DNL Adobe Sensei].
 
-[!DNL Adobe Developer App Builder] est un framework destiné à créer et déployer des applications web personnalisées sur [!DNL Adobe I/O] Runtime pour étendre les solutions Adobe Experience Cloud. Pour créer des applications personnalisées, les développeurs peuvent tirer parti de [!DNL React Spectrum] (boîte à outils d’interface utilisateur d’Adobe), créer des microservices et des événements personnalisés, et orchestrer les API. Voir [documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
+[!DNL Adobe Developer App Builder] est un framework destiné à créer et déployer des applications web personnalisées sur [!DNL Adobe I/O] Runtime pour étendre les solutions Adobe Experience Cloud. Pour créer des applications personnalisées, les développeurs peuvent tirer parti de [!DNL React Spectrum] (boîte à outils d’interface utilisateur d’Adobe), créer des microservices et des événements personnalisés, et orchestrer les API. Consultez la [documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Vous pouvez utiliser le service web [!DNL Asset Compute] afin de générer des m
 >[!MORELIKETHIS]
 >
 >* [Présentation du traitement des ressources à l’aide de microservices de ressources dans  [!DNL Adobe Experience Manager]  as a  [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=fr).
->* [Documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
+>* [Documentation d’Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
 >* [Formats de fichiers pris en charge pour le traitement](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html?lang=fr).
 
 
